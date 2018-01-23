@@ -14,8 +14,11 @@ class DistrictRepository {
                     location: upCaseLocation
                 }
             }
+            const cleanNum = dataPoint.Data === "N/A" ? dataPoint.Data = 0 : dataPoint.Data;
 
-            accu[ upCaseLocation ].data[ yearTimeFrame ] = dataPoint.Data;
+            const roundedNum = cleanNum > 0 && cleanNum < 1 ? ( Math.round( cleanNum * 1000 ) ) / 1000 : cleanNum;
+            
+            accu[ upCaseLocation ].data[ yearTimeFrame ] = roundedNum;
 
             return accu            
         }, {})
