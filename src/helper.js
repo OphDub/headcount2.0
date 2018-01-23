@@ -6,15 +6,25 @@ class DistrictRepository {
 
     cleanData(originalData) {
         const dataObj = originalData.reduce( (accu, dataPoint) => {
+            const upCaseLocation = dataPoint.Location.toUpperCase();
+            const yearTimeFrame = dataPoint.TimeFrame;
             if(!accu[ dataPoint.Locaton ]) {
-                const datePercent = dataPoint.TimeFrame + ': ' + dataPoint.Data
                 accu[ dataPoint.Location ] = {
-                    data: datePercent
+                    data: {},
+                    location: upCaseLocation
                 }
             }
+
+            accu[ dataPoint.Location ].data[ yearTimeFrame ] = dataPoint.Data;
+
             return accu            
         }, {})
         return dataObj;
+    }
+
+    findByName(name = undefined) {
+        const upCaseName = name.toUpperCase();
+        return this.data[ upCaseName ] ? this.data[ upCaseName ] : undefined 
     }
 }
 
