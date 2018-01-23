@@ -2,11 +2,14 @@ import React from 'react';
 import './CardContainer.css';
 import Card from '../Card/Card';
 
-const CardContainer = () => {
+const CardContainer = ({districts}) => {
+  const renderedCards = districts.map((district, index) => 
+        <Card {...district}/>)
+
   return (
-    <div>
-      Card Container
-    </div>
+    <section>
+      {renderedCards}
+    </section>
   )
 }
 
