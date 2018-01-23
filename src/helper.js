@@ -4,8 +4,17 @@ class DistrictRepository {
         this.data = this.cleanData(originalData);
     }
 
-    cleanData(data) {
-        console.log(data)
+    cleanData(originalData) {
+        const dataObj = originalData.reduce( (accu, dataPoint) => {
+            if(!accu[ dataPoint.Locaton ]) {
+                const datePercent = dataPoint.TimeFrame + ': ' + dataPoint.Data
+                accu[ dataPoint.Location ] = {
+                    data: datePercent
+                }
+            }
+            return accu            
+        }, {})
+        return dataObj;
     }
 }
 
