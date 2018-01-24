@@ -6,7 +6,7 @@ const Card = ({ location, data }) => {
   console.log(data)
   return (
     <article>
-      <h3>{ location }</h3>
+      <h4>{ location }</h4>
       <ul>{ Object.keys(data).map( dataPoint => <li>{ dataPoint + ': ' + data[ dataPoint ] }</li> ) }</ul>
     </article>
   )

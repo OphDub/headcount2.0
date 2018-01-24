@@ -1,1 +1,13 @@
-/*APP COMPONENT RELATED CSS GOES HERE*/
+h1, form {
+    text-align: center;
+}
+
+form {
+    padding: 20px;
+    height: 30px;
+}
+
+input {
+    height: 30px;
+    width: 300px;
+}
