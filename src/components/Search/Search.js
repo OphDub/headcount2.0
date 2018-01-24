@@ -5,14 +5,14 @@ class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      districtName: ''
+      searchValue: ''
     }
   }
 
   handleInput = (e) => {
     const { value } = e.target;
-    
-    this.setState({ districtName: value })
+    this.setState({ searchValue: value })
+    this.props.filterDistricts(this.state.searchValue)
   }
 
   render() {
