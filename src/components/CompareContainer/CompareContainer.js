@@ -1,6 +1,6 @@
 import React from 'react';
 import './CompareContainer.css';
-import Card from '../Card/Card';
+// import Card from '../Card/Card';
 
 const CompareContainer = () => {
   return (

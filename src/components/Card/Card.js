@@ -1,4 +1,5 @@
 import React from 'react';
+import { string, object } from 'prop-types';
 import './Card.css';
 
 const Card = ({ location, data }) => {
@@ -14,6 +15,11 @@ const Card = ({ location, data }) => {
       <ul>{ eachCard }</ul>
     </article>
   )
+}
+
+Card.propTypes = {
+  location: string.isRequired,
+  data: object.isRequired,
 }
 
 export default Card;
