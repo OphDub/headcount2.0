@@ -10,8 +10,8 @@ class DistrictRepository {
             const yearTimeFrame = dataPoint.TimeFrame;
             if(!accu[ upCaseLocation ]) {
                 accu[ upCaseLocation ] = {
-                    data: {},
-                    location: upCaseLocation
+                    location: upCaseLocation,
+                    data: {}
                 }
             }
             const cleanNum = dataPoint.Data === "N/A" ? dataPoint.Data = 0 : dataPoint.Data;
@@ -42,17 +42,13 @@ class DistrictRepository {
           acc.push(this.data[district])
           return acc
         }, [])
+        
       } else {
         const upcaseName = name.toUpperCase();
         const districts = Object.keys(this.data);
 
-        return districts.filter((district) => {
-          if (district.location === upcaseName) {
-            return district
-          }
-        })
+        return districts.filter(dataPoint => this.data[dataPoint].location.includes(upcaseName))
       }
-
     }
 }
 
