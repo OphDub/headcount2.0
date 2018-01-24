@@ -10,17 +10,24 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      districts: []
+      allDistricts: [],
+      // helper = new DistrictRepository
     }
   }
 
   componentDidMount() {
-    const districts = new DistrictRepository(kinderData).findAllMatches();
-    this.setState({ districts: districts });
+    const kinderDist = new DistrictRepository(kinderData).findAllMatches();
+    this.setState({ allDistricts: kinderDist });
   }
 
-  filterDistricts() {
+  filterDistricts(string) {
     //takes input from Search and filters through districts array
+    const upcaseString = string.toUpperCase();
+    const foundDistricts = new DistrictRepository(kinderData).findAllMatches(upcaseString)
+    // const newStuff = this.state.allDistricts.findAllMatches(upcaseString)
+
+    console.log(foundDistricts)
+    // this.setState({ allDistricts: foundDistricts });
   }
 
   render() {
@@ -28,9 +35,9 @@ class App extends Component {
     return (
       <div>
         <h1>Welcome To Headcount 2.0</h1>
-        <Search />
+        <Search filterDistricts={this.filterDistricts}/>
         <CompareContainer />
-        <CardContainer districts={this.state.districts}/>
+        <CardContainer districts={this.state.allDistricts}/>
       </div>
     );
   }
