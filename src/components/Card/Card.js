@@ -1,11 +1,13 @@
 import React from 'react';
 import './Card.css';
 
-const Card = () => {
+const Card = ({ location, data }) => {
+  // <article onClick={() => selectCard(location)}> ?
   return (
-    <div>
-      I am a Card
-    </div>
+    <article>
+      <h3>{ location }</h3>
+      <ul>{ data }</ul>
+    </article>
   )
 }
 
