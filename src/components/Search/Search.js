@@ -1,12 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Search.css';
 
-const Search = () => {
-  return (
-    <form action="">
-      <input type="text" placeholder="Search by District Name"/>
-    </form>
-  )
+class Search extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchValue: ''
+    }
+  }
+
+  handleInput = (e) => {
+    const { value } = e.target;
+    this.setState({ searchValue: value })
+    this.props.filterDistricts(this.state.searchValue)
+  }
+
+  render() {
+    return (
+      <form action="">
+        <input  type="text"
+                placeholder="Search by District Name"
+                onChange={this.handleInput}/>
+      </form>
+    )
+  }
 }
 
 export default Search;

@@ -39,6 +39,8 @@ class DistrictRepository {
       if(!name) {
         const districts = Object.keys(this.data);
 
+        // return districts.map((schoolName) => this.data[schoolName])
+
         return districts.reduce((acc, district) => {
           acc.push(this.data[ district ]);
           return acc
@@ -48,7 +50,13 @@ class DistrictRepository {
         const upcaseName = name.toUpperCase();
         const districts = Object.keys(this.data);
 
-        return districts.filter(dataPoint => this.data[ dataPoint ].location.includes(upcaseName))
+        return districts.filter(dataPoint => {
+          if (this.data[ dataPoint ].location.includes(upcaseName)) {
+            return this.data[ dataPoint ]
+          }
+        }).map((schoolName) => {
+          return this.data[schoolName]
+        })
       }
     }
 }

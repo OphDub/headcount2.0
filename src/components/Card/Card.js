@@ -6,7 +6,7 @@ const Card = ({ location, data }) => {
   // <article onClick={() => selectCard(location)}> ?
   const eachCard = Object.keys(data).map( dataPoint => {
                                             const highOrLow = data[ dataPoint ] >= 0.5 ? "highFive" : "lowFive";
-                                            
+
                                             return <li className={ highOrLow } >{ dataPoint + ': ' + data[ dataPoint ] }</li>
                                         } )
   return (
