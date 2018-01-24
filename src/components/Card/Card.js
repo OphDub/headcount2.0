@@ -1,11 +1,14 @@
 import React from 'react';
 import './Card.css';
 
-const Card = () => {
+const Card = ({ location, data }) => {
+  // <article onClick={() => selectCard(location)}> ?
+  console.log(data)
   return (
-    <div>
-      I am a Card
-    </div>
+    <article>
+      <h3>{ location }</h3>
+      <ul>{ Object.keys(data).map( dataPoint => dataPoint ) }</ul>
+    </article>
   )
 }
 

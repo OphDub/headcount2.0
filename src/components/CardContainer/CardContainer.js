@@ -4,7 +4,8 @@ import Card from '../Card/Card';
 
 const CardContainer = ({districts}) => {
   const renderedCards = districts.map((district, index) => 
-        <Card {...district}/>)
+        <Card {...district}
+               key={district.location}/>)
 
   return (
     <section>
