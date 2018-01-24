@@ -13,3 +13,11 @@ ul {
 h4 {
     text-align: center;
 }
+
+.highFive {
+    color: blue;
+}
+
+.lowFive {
+    color: orangered;
+}
