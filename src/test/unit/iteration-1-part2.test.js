@@ -1,5 +1,5 @@
 import DistrictRepository from '../../helper';
-import kinderData from '../../../data/kindergartners_in_full_day_program';
+import kinderData from '../../data/kindergartners_in_full_day_program';
 
 describe('DistrictRepository iteration 1 - part 2', () =>  {
   const district = new DistrictRepository(kinderData);
@@ -18,5 +18,4 @@ describe('DistrictRepository iteration 1 - part 2', () =>  {
     expect(district.findAllMatches('packers').length).toBe(0);
     expect(district.findAllMatches('df').length).toBe(0);
   });
-
 });

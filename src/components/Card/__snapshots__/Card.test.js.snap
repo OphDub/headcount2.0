@@ -17,11 +17,37 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "I am a Card",
+      "children": Array [
+        <h3 />,
+        <ul />,
+      ],
     },
     "ref": null,
-    "rendered": "I am a Card",
-    "type": "div",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "ul",
+      },
+    ],
+    "type": "article",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -29,11 +55,37 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "I am a Card",
+        "children": Array [
+          <h3 />,
+          <ul />,
+        ],
       },
       "ref": null,
-      "rendered": "I am a Card",
-      "type": "div",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "ul",
+        },
+      ],
+      "type": "article",
     },
   ],
   Symbol(enzyme.__options__): Object {
