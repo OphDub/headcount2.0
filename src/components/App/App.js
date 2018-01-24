@@ -15,7 +15,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const districts = new DistrictRepository(kinderData);
+    const districts = new DistrictRepository(kinderData).findAllMatches();
     this.setState({ districts: districts });
   }
 
