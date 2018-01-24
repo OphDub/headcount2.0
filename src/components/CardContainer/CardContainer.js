@@ -1,4 +1,5 @@
 import React from 'react';
+import { arrayOf, shape, string, object } from 'prop-types';
 import './CardContainer.css';
 import Card from '../Card/Card';
 
@@ -12,6 +13,13 @@ const CardContainer = ({districts}) => {
       {renderedCards}
     </section>
   )
+}
+
+CardContainer.propTypes = {
+  districts: arrayOf(shape({
+    location: string.isRequired,
+    data: object.isRequired,
+  }))
 }
 
 export default CardContainer;
