@@ -20,6 +20,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.districts)
     return (
       <div>
         <h1>Welcome To Headcount 2.0</h1>

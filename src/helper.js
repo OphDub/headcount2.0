@@ -11,9 +11,10 @@ class DistrictRepository {
             if(!accu[ upCaseLocation ]) {
                 accu[ upCaseLocation ] = {
                     location: upCaseLocation,
-                    data: {}
+                    data: {},
                 }
             }
+
             const cleanNum = dataPoint.Data === "N/A" || dataPoint.Data === "#DIV/0!" ? dataPoint.Data = 0 : dataPoint.Data;
 
             const roundedNum = cleanNum > 0 && cleanNum < 1 ? ( Math.round( cleanNum * 1000 ) ) / 1000 : cleanNum;
@@ -27,10 +28,10 @@ class DistrictRepository {
 
     findByName(name) {
         if(name === undefined) {
-            return undefined
+            return undefined;
         } else {
             const upCaseName = name.toUpperCase();            
-            return this.data[ upCaseName ] ? this.data[ upCaseName ] : undefined 
+            return this.data[ upCaseName ] ? this.data[ upCaseName ] : undefined;
         }
     }
 
@@ -39,7 +40,7 @@ class DistrictRepository {
         const districts = Object.keys(this.data);
 
         return districts.reduce((acc, district) => {
-          acc.push(this.data[district])
+          acc.push(this.data[ district ]);
           return acc
         }, [])
 
@@ -47,7 +48,7 @@ class DistrictRepository {
         const upcaseName = name.toUpperCase();
         const districts = Object.keys(this.data);
 
-        return districts.filter(dataPoint => this.data[dataPoint].location.includes(upcaseName))
+        return districts.filter(dataPoint => this.data[ dataPoint ].location.includes(upcaseName))
       }
     }
 }
