@@ -14,7 +14,7 @@ class DistrictRepository {
                     data: {}
                 }
             }
-            const cleanNum = dataPoint.Data === "N/A" ? dataPoint.Data = 0 : dataPoint.Data;
+            const cleanNum = dataPoint.Data === "N/A" || dataPoint.Data === "#DIV/0!" ? dataPoint.Data = 0 : dataPoint.Data;
 
             const roundedNum = cleanNum > 0 && cleanNum < 1 ? ( Math.round( cleanNum * 1000 ) ) / 1000 : cleanNum;
             
@@ -42,7 +42,7 @@ class DistrictRepository {
           acc.push(this.data[district])
           return acc
         }, [])
-        
+
       } else {
         const upcaseName = name.toUpperCase();
         const districts = Object.keys(this.data);
