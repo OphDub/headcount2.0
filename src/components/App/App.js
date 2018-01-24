@@ -24,21 +24,11 @@ class App extends Component {
   filterDistricts = (string) => {
     const upcaseString = string.toUpperCase();
     const foundDistricts = masterDistrict.findAllMatches(upcaseString);
-    console.log(foundDistricts)
-    // this.setState({ allDistricts: foundDistricts })
 
-    // const foundDistricts = this.state.allDistricts.filter((district) => {
-    //   if(district.location === upcaseString) {
-    //     console.log(district)
-    //   }
-    // })
-    // console.log(foundDistricts)
-    // this.setState({ allDistricts: foundDistricts })
-
+    this.setState({ allDistricts: foundDistricts });
   }
 
   render() {
-    // console.log(this.state.districts)
     return (
       <div>
         <h1>Welcome To Headcount 2.0</h1>

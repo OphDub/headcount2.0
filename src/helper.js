@@ -18,10 +18,10 @@ class DistrictRepository {
             const cleanNum = dataPoint.Data === "N/A" || dataPoint.Data === "#DIV/0!" ? dataPoint.Data = 0 : dataPoint.Data;
 
             const roundedNum = cleanNum > 0 && cleanNum < 1 ? ( Math.round( cleanNum * 1000 ) ) / 1000 : cleanNum;
-            
+
             accu[ upCaseLocation ].data[ yearTimeFrame ] = roundedNum;
 
-            return accu            
+            return accu
         }, {})
         return dataObj;
     }
@@ -30,7 +30,7 @@ class DistrictRepository {
         if(name === undefined) {
             return undefined;
         } else {
-            const upCaseName = name.toUpperCase();            
+            const upCaseName = name.toUpperCase();
             return this.data[ upCaseName ] ? this.data[ upCaseName ] : undefined;
         }
     }
