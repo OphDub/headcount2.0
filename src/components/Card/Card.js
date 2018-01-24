@@ -4,7 +4,7 @@ import './Card.css';
 
 const Card = ({ location, data }) => {
   // <article onClick={() => selectCard(location)}> ?
-  console.log(data)
+  // console.log(data)
   return (
     <article>
       <h3>{ location }</h3>

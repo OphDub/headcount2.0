@@ -8,6 +8,7 @@
     "react-scripts": "1.1.0"
   },
   "dependencies": {
+    "@ophdub/complete-me": "git+https://github.com/OphDub/complete-me.git",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"

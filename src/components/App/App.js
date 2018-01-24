@@ -19,6 +19,10 @@ class App extends Component {
     this.setState({ districts: districts });
   }
 
+  filterDistricts() {
+    //takes input from Search and filters through districts array
+  }
+
   render() {
     return (
       <div>
