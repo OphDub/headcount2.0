@@ -1,0 +1,23 @@
+article {
+    border: 1px solid lightslategray;
+    height: 300px;
+    width: 200px;
+    margin: 10px;
+}
+
+ul {
+    margin: auto;
+    padding-left: 70px;
+}
+
+h4 {
+    text-align: center;
+}
+
+.highFive {
+    color: blue;
+}
+
+.lowFive {
+    color: orangered;
+}
