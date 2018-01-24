@@ -33,6 +33,27 @@ class DistrictRepository {
             return this.data[ upCaseName ] ? this.data[ upCaseName ] : undefined 
         }
     }
+
+    findAllMatches(name) {
+      if(!name) {
+        const districts = Object.keys(this.data);
+
+        return districts.reduce((acc, district) => {
+          acc.push(this.data[district])
+          return acc
+        }, [])
+      } else {
+        const upcaseName = name.toUpperCase();
+        const districts = Object.keys(this.data);
+
+        return districts.filter((district) => {
+          if (district.location === upcaseName) {
+            return district
+          }
+        })
+      }
+
+    }
 }
 
 export default DistrictRepository;
