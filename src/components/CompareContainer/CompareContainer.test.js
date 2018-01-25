@@ -10,4 +10,6 @@ describe('COMPARE CONTAINER', () => {
     const renderedComponent = shallow(<CompareContainer />);
     expect(renderedComponent).toMatchSnapshot();
   })
+
+  
 })
