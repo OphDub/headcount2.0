@@ -19,6 +19,7 @@ ShallowWrapper {
     "props": Object {
       "action": "",
       "children": <input
+        onChange={[Function]}
         placeholder="Search by District Name"
         type="text"
 />,
@@ -29,6 +30,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
+        "onChange": [Function],
         "placeholder": "Search by District Name",
         "type": "text",
       },
@@ -46,6 +48,7 @@ ShallowWrapper {
       "props": Object {
         "action": "",
         "children": <input
+          onChange={[Function]}
           placeholder="Search by District Name"
           type="text"
 />,
@@ -56,6 +59,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "onChange": [Function],
           "placeholder": "Search by District Name",
           "type": "text",
         },
