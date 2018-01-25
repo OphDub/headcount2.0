@@ -3,10 +3,12 @@ import { arrayOf, shape, string, object } from 'prop-types';
 import './CardContainer.css';
 import Card from '../Card/Card';
 
-const CardContainer = ({districts}) => {
-  const renderedCards = districts.map((district, index) => 
+const CardContainer = ({ districts, selectCard }) => {
+  const renderedCards = districts.map((district) =>
         <Card {...district}
-               key={district.location}/>)
+               key={district.location}
+               id={district.location}
+               selectCard={selectCard}/>)
 
   return (
     <section>
