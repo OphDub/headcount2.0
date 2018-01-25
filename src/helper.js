@@ -59,6 +59,17 @@ class DistrictRepository {
         })
       }
     }
+
+    findAverage(name) {
+        const aveKeys = Object.keys(this.data[ name ].data)
+        const averageOfCardData = aveKeys.reduce( (accu, val) => {
+            accu += this.data[ name ].data[ val ]
+            return accu
+        }, 0 ) / aveKeys.length
+        
+        const roundedAve = Math.round(averageOfCardData * 1000) / 1000;        
+        return roundedAve; 
+    }
 }
 
 export default DistrictRepository;
