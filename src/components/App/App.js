@@ -31,9 +31,10 @@ class App extends Component {
 
   selectCard = (id) => {
     const foundDistrict = this.state.allDistricts.find((district)=> district.location === id)
-    const newFoundDistrictArray = [...this.state.comparedDistricts,foundDistrict]
+    const newFoundDistrictArray = [...this.state.comparedDistricts, foundDistrict]
+    const stateLocations = this.state.comparedDistricts.map( district => district.location)
 
-    if (this.state.comparedDistricts.length < 2 && this.state.comparedDistricts !== newFoundDistrictArray) {
+    if (!stateLocations.includes(foundDistrict.location) && newFoundDistrictArray.length <= 2 ) {
       this.setState({ comparedDistricts: newFoundDistrictArray })
     }
   }
