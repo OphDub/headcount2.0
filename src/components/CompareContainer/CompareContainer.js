@@ -1,11 +1,16 @@
 import React from 'react';
 import './CompareContainer.css';
-// import Card from '../Card/Card';
+import Card from '../Card/Card';
 
-const CompareContainer = () => {
+const CompareContainer = ({ comparedDistricts }) => {
+  const renderedComparison = comparedDistricts.map( district =>
+    <Card {...district}
+          key={district.location}
+          id={district.location}/>)
+
   return (
     <section>
-      Compare Container
+      {renderedComparison}
     </section>
   )
 }
