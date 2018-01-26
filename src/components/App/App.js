@@ -13,7 +13,8 @@ class App extends Component {
     super(props);
     this.state = {
       allDistricts: [],
-      comparedDistricts: []
+      comparedDistricts: [],
+      comparisionObj: {}
     }
   }
 
@@ -33,10 +34,19 @@ class App extends Component {
     const foundDistrict = this.state.allDistricts.find((district)=> district.location === id)
     const newFoundDistrictArray = [...this.state.comparedDistricts, foundDistrict]
     const stateLocations = this.state.comparedDistricts.map( district => district.location)
-
+    
     if (!stateLocations.includes(foundDistrict.location) && newFoundDistrictArray.length <= 2 ) {
       this.setState({ comparedDistricts: newFoundDistrictArray })
+      
+      if(newFoundDistrictArray.length === 2) {
+        const comparision = masterDistrict.compareDistrictAverages(newFoundDistrictArray[0].location, newFoundDistrictArray[1].location)
+        // this.setState({comparisionObj: comparision})
+        console.log(comparision)
+      }
+        
+    
     }
+    
   }
 
   render() {
