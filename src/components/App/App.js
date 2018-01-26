@@ -14,7 +14,7 @@ class App extends Component {
     this.state = {
       allDistricts: [],
       comparedDistricts: [],
-      comparisionObj: {}
+      comparisonObj: {}
     }
   }
 
