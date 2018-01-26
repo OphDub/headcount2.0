@@ -33,24 +33,17 @@ class App extends Component {
     const foundDistrict = this.state.allDistricts.find((district)=> district.location === id)
     const newFoundDistrictArray = [...this.state.comparedDistricts,foundDistrict]
 
-    this.setState({
-      comparedDistricts: newFoundDistrictArray
-    })
-
-    // if (this.state.comparedDistricts.length < 2) {
-    //   this.setState({comparedDistricts: [foundDistrict]})
-    // } else {
-
-    // }
+    if (this.state.comparedDistricts.length < 2 && this.state.comparedDistricts !== newFoundDistrictArray) {
+      this.setState({ comparedDistricts: newFoundDistrictArray })
+    }
   }
 
   render() {
-    console.log(this.state)
     return (
       <div>
         <h1>Welcome To Headcount 2.0</h1>
         <Search filterDistricts={this.filterDistricts}/>
-        <CompareContainer />
+        <CompareContainer comparedDistricts={this.state.comparedDistricts}/>
         <CardContainer districts={this.state.allDistricts} selectCard={this.selectCard}/>
       </div>
     );

@@ -34,9 +34,6 @@ describe('APP', () => {
     const secondDistrict = renderedComponent.find('article').last()
 
     firstDistrict.simulate('click')
-
-    // expect(renderedComponent.state().comparedDistricts).toEqual([mockedCardArray[0]])
-
     secondDistrict.simulate('click')
 
     expect(renderedComponent.state().comparedDistricts).toEqual(mockedCardArray)
