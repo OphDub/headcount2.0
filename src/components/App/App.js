@@ -37,25 +37,28 @@ class App extends Component {
     
     if (!stateLocations.includes(foundDistrict.location) && newFoundDistrictArray.length <= 2 ) {
       this.setState({ comparedDistricts: newFoundDistrictArray })
-      
-      if(newFoundDistrictArray.length === 2) {
-        const comparision = masterDistrict.compareDistrictAverages(newFoundDistrictArray[0].location, newFoundDistrictArray[1].location)
-        // this.setState({comparisionObj: comparision})
-        console.log(comparision)
-      }
-        
-    
+
+      this.compareCardData(newFoundDistrictArray);
     }
-    
   }
 
+  compareCardData = (newFoundDistrictArray) => {
+    if(newFoundDistrictArray.length === 2) {
+      const comparisionObj = masterDistrict.compareDistrictAverages(newFoundDistrictArray[0].location, 
+                                                                 newFoundDistrictArray[1].location);
+      this.setState({ comparisionObj })
+    }
+  }
+    
   render() {
     return (
       <div>
         <h1>Welcome To Headcount 2.0</h1>
-        <Search filterDistricts={this.filterDistricts}/>
-        <CompareContainer comparedDistricts={this.state.comparedDistricts} selectCard={this.selectCard}/>
-        <CardContainer districts={this.state.allDistricts} selectCard={this.selectCard}/>
+        <Search filterDistricts={this.filterDistricts} />
+        <CompareContainer comparedDistricts={this.state.comparedDistricts} 
+                          selectCard={this.selectCard} 
+                          comparisionObj={this.state.comparisionObj} />
+        <CardContainer districts={this.state.allDistricts} selectCard={this.selectCard} />
       </div>
     );
   }
