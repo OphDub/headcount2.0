@@ -31,5 +31,9 @@ describe('APP', () => {
     expect(renderedComponent.state().comparedDistricts).toEqual(mockedCardArray)
     expect(renderedComponent.find('section').first().children().length).toEqual(2)
   })
+
+  it('when two cards are compared it should create a comparison object it state', () => {
+    
+  })
 })
 
