@@ -6,7 +6,7 @@ import Adapter from 'enzyme-adapter-react-16';
 
 describe('COMPARE CONTAINER', () => {
 
-  test('it should match the snapshot', () => {
+  test.skip('it should match the snapshot', () => {
     const renderedComponent = shallow(<CompareContainer />);
     expect(renderedComponent).toMatchSnapshot();
   })
