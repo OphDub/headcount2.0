@@ -44,7 +44,7 @@ class App extends Component {
       <div>
         <h1>Welcome To Headcount 2.0</h1>
         <Search filterDistricts={this.filterDistricts}/>
-        <CompareContainer comparedDistricts={this.state.comparedDistricts}/>
+        <CompareContainer comparedDistricts={this.state.comparedDistricts} selectCard={this.selectCard}/>
         <CardContainer districts={this.state.allDistricts} selectCard={this.selectCard}/>
       </div>
     );
