@@ -3,13 +3,13 @@ import './CompareContainer.css';
 import Card from '../Card/Card';
 
 const CompareContainer = ({ comparedDistricts, selectCard, comparisionObj }) => {
-  const comparisonArr = Object.entries(comparisionObj);
+  const comparisonArr = Object.entries(comparisionObj).map( (entry) => <h4>{entry[0]} <span>{entry[1]}</span></h4> )
   const renderedComparison = comparedDistricts.map( district =>
                                                             <Card {...district}
                                                                   key={district.location}
                                                                   id={district.location}
                                                                   selectCard={selectCard}/>)
-                                                                  console.log(renderedComparison)
+                                                                  console.log(comparisonArr)
 
   return (
     <section>
