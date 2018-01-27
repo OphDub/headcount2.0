@@ -41,13 +41,13 @@ class App extends Component {
       this.compareCardData(newFoundDistrictArray);
     } else {
       this.setState({ comparedDistricts: [],
-                      comparisionObj: {} });
+                      comparisonObj: {} });
     }
   }
 
   compareCardData = (newFoundDistrictArray) => {
     if(newFoundDistrictArray.length === 2) {
-      const comparisonObj = masterDistrict.compareDistrictAverages(newFoundDistrictArray[0].location,
+      const comparisonObj = masterDistrict.compareDistrictAverages(newFoundDistrictArray[0].location, 
                                                                  newFoundDistrictArray[1].location);
       this.setState({ comparisonObj })
     }
@@ -58,8 +58,8 @@ class App extends Component {
       <div>
         <h1>Welcome To Headcount 2.0</h1>
         <Search filterDistricts={this.filterDistricts} />
-        <CompareContainer comparedDistricts={this.state.comparedDistricts}
-                          selectCard={this.selectCard}
+        <CompareContainer comparedDistricts={this.state.comparedDistricts} 
+                          selectCard={this.selectCard} 
                           comparisonObj={this.state.comparisonObj} />
         <CardContainer districts={this.state.allDistricts} selectCard={this.selectCard} />
       </div>
