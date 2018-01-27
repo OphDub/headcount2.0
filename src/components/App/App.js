@@ -31,17 +31,18 @@ class App extends Component {
   }
 
   selectCard = (id) => {
+    this.addCss(id)
     const foundDistrict = this.state.allDistricts.find((district)=> district.location === id)
     const newFoundDistrictArray = [...this.state.comparedDistricts, foundDistrict]
     const stateLocations = this.state.comparedDistricts.map( district => district.location)
 
     if (!stateLocations.includes(foundDistrict.location) && newFoundDistrictArray.length <= 2 ) {
-      this.setState({ comparedDistricts: newFoundDistrictArray })
+      this.setState({ comparedDistricts: newFoundDistrictArray })  
 
       this.compareCardData(newFoundDistrictArray);
     } else {
       this.setState({ comparedDistricts: [],
-                      comparisonObj: {} });
+                      comparisonObj: {} });    
     }
   }
 
@@ -50,6 +51,15 @@ class App extends Component {
       const comparisonObj = masterDistrict.compareDistrictAverages(newFoundDistrictArray[0].location, 
                                                                  newFoundDistrictArray[1].location);
       this.setState({ comparisonObj })
+    }
+  }
+
+  addCss = (id) => {
+    if(document.getElementById(id).className === "unselected" && document.getElementById(id).parentElement.className !== 'compareContainer') {
+      document.getElementById(id).setAttribute("class", "selected")
+
+    } else if (document.getElementById(id).className === "selected" && document.getElementById(id).parentElement.className === 'cardContainer'){
+      document.getElementById(id).setAttribute("class", "unselected")
     }
   }
 

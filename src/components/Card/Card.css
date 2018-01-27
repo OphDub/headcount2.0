@@ -5,10 +5,6 @@ article {
     margin: 10px;
 }
 
-article.selectedCard {
-    border: 10px solid blue;
-}
-
 ul {
     margin: auto;
     padding-left: 70px;
@@ -26,3 +22,9 @@ h4 {
     color: orangered;
 }
 
+.cardContainer article:hover {
+    box-shadow: 4px 4px 0px 0px rgba(22, 22, 87, 0.2);
+}
+.cardContainer article:active {
+    border: 3px solid #40c8e0;
+}
