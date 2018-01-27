@@ -8,20 +8,22 @@ describe('APP', () => {
     // ReactDOM.render(<App />, div);
   });
 
+  it.skip('should start with an allDistricts array full of objects', () => {
+    const renderedComponent = shallow(<App />)
+
+    
+  })
+
   it('when cards are clicked they should be stored in state and rendered to the page', () => {
     const renderedComponent = mount(<App />)
     const mockedCardArray = [
-      {
-        location: "COLORADO",
-        data: { 2004: 1, 2005: 0.5, 2006: 0.25}
-      },
-      {
-        location: "ACADEMY",
-        data: { 2004: 0.75, 2005: 0.25, 2006: 1 }
-      }
+      { location: "COLORADO", data: { 2004: 1, 2005: 0.5, 2006: 0.25}},
+      { location: "ACADEMY", data: { 2004: 0.75, 2005: 0.25, 2006: 1 }}
     ]
 
     renderedComponent.setState({allDistricts: mockedCardArray})
+    console.log(renderedComponent.debug())
+
     const firstDistrict = renderedComponent.find('article').first()
     const secondDistrict = renderedComponent.find('article').last()
 
@@ -35,14 +37,8 @@ describe('APP', () => {
   it('when two cards are compared it should create a comparison object in state', () => {
     const renderedComponent = mount(<App />)
     const mockedCardArray = [
-      {
-        location: "COLORADO",
-        data: { 2004: 1, 2005: 0.5, 2006: 0.25}
-      },
-      {
-        location: "ACADEMY",
-        data: { 2004: 0.75, 2005: 0.25, 2006: 1 }
-      }
+      { location: "COLORADO", data: { 2004: 1, 2005: 0.5, 2006: 0.25}},
+      { location: "ACADEMY", data: { 2004: 0.75, 2005: 0.25, 2006: 1 }}
     ]
 
     renderedComponent.setState({allDistricts: mockedCardArray})
