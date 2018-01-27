@@ -2,8 +2,8 @@ import React from 'react';
 import './CompareContainer.css';
 import Card from '../Card/Card';
 
-const CompareContainer = ({ comparedDistricts, selectCard, comparisionObj }) => {
-  const comparisonArr = Object.entries(comparisionObj).map( (entry) => <div>{entry[0]} <span>{entry[1]}</span></div> )
+const CompareContainer = ({ comparedDistricts, selectCard, comparisonObj }) => {
+  const comparisonArr = Object.entries(comparisonObj).map( (entry) => <div>{entry[0]} <span>{entry[1]}</span></div> )
   const renderedComparison = comparedDistricts.map( district =>
                                                             <Card {...district}
                                                                   key={district.location}
@@ -16,7 +16,7 @@ const CompareContainer = ({ comparedDistricts, selectCard, comparisionObj }) => 
       {renderedComparison[0]}
       <article className="comparisonCard">
         <div>{comparisonArr[0]}</div>
-        <div>{comparisionObj.compared}</div>
+        <div>{comparisonObj.compared}</div>
         <div>{comparisonArr[1]}</div>
       </article>
       {renderedComparison[1]}
