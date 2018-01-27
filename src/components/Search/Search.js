@@ -18,7 +18,7 @@ class Search extends Component {
 
   render() {
     return (
-      <form action="">
+      <form>
         <input  type="text"
                 placeholder="Search by District Name"
                 onChange={this.handleInput}/>
@@ -27,8 +27,8 @@ class Search extends Component {
   }
 }
 
-// Search.propTypes = {
-//   filterDistricts: PropTypes.func.isRequired
-// }
+Search.propTypes = {
+  filterDistricts: PropTypes.func.isRequired
+}
 
 export default Search;

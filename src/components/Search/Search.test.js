@@ -5,9 +5,10 @@ import Adapter from 'enzyme-adapter-react-16';
 
 describe('SEARCH', () => {
   let renderedComponent
+  let mockFn
 
   beforeEach(() => {
-    const mockFn = jest.fn()
+    mockFn = jest.fn()
     renderedComponent = shallow(<Search filterDistricts={mockFn} />);
   })
 
@@ -22,5 +23,14 @@ describe('SEARCH', () => {
     renderedComponent.update()
 
     expect(renderedComponent.state().searchValue).toEqual(mockEvent.target.value)
+  })
+
+  test('when state is updated, it should also call the filterDistrcit function passed to Search', () => {
+    const mockEvent = {target: {value: 'colorado' }}
+
+    renderedComponent.instance().handleInput(mockEvent)
+    renderedComponent.update()
+
+    expect(mockFn.mock.calls).toEqual([[mockEvent.target.value]])
   })
 })
