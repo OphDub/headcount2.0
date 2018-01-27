@@ -32,8 +32,32 @@ describe('APP', () => {
     expect(renderedComponent.find('section').first().children().length).toEqual(2)
   })
 
-  it('when two cards are compared it should create a comparison object it state', () => {
-    
+  it('when two cards are compared it should create a comparison object in state', () => {
+    const renderedComponent = mount(<App />)
+    const mockedCardArray = [
+      {
+        location: "COLORADO",
+        data: { 2004: 1, 2005: 0.5, 2006: 0.25}
+      },
+      {
+        location: "ACADEMY",
+        data: { 2004: 0.75, 2005: 0.25, 2006: 1 }
+      }
+    ]
+
+    renderedComponent.setState({allDistricts: mockedCardArray})
+    const firstDistrict = renderedComponent.find('article').first()
+    const secondDistrict = renderedComponent.find('article').last()
+    const mockCompObj = {
+      "COLORADO": 0.583,
+      "ACADEMY": 0.666,
+      "compared": 0.875
+    }
+
+    firstDistrict.simulate('click')
+    secondDistrict.simulate('click')
+
+    expect(renderedComponent.state().comparisonObj).toEqual(mockCompObj)
   })
 })
 
