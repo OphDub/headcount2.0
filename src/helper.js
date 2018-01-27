@@ -77,7 +77,9 @@ class DistrictRepository {
         const upCaseSkool1 = skool1.toUpperCase();
         const upCaseSkool2 = skool2.toUpperCase();
         
-        const average = this.findAverage(upCaseSkool1) / this.findAverage(upCaseSkool2);
+        const average = this.findAverage(upCaseSkool1) < this.findAverage(upCaseSkool2) ? 
+                        this.findAverage(upCaseSkool1) / this.findAverage(upCaseSkool2) :
+                        this.findAverage(upCaseSkool2) / this.findAverage(upCaseSkool1);
         const roundedAve = Math.round(average * 1000) / 1000;
 
         resultObj[ upCaseSkool1 ] = this.findAverage(upCaseSkool1);
