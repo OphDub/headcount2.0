@@ -39,6 +39,9 @@ class App extends Component {
       this.setState({ comparedDistricts: newFoundDistrictArray })
 
       this.compareCardData(newFoundDistrictArray);
+    } else {
+      this.setState({ comparedDistricts: [],
+                      comparisionObj: {} });
     }
   }
 
