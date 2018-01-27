@@ -8,11 +8,14 @@ describe('APP', () => {
     // ReactDOM.render(<App />, div);
   });
 
-  it.skip('should start with an allDistricts array full of objects', () => {
+  it('should start with an allDistricts array full of objects, an empty comparedDistrict array, and an empty object', () => {
     const renderedComponent = shallow(<App />)
 
-    
+    expect(renderedComponent.state().comparedDistricts).toEqual([])
+    expect(renderedComponent.state().comparisonObj).toEqual({})
   })
+
+  it('')
 
   it('when cards are clicked they should be stored in state and rendered to the page', () => {
     const renderedComponent = mount(<App />)
