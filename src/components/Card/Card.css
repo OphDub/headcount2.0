@@ -5,6 +5,10 @@ article {
     margin: 10px;
 }
 
+article.selectedCard {
+    border: 10px solid blue;
+}
+
 ul {
     margin: auto;
     padding-left: 70px;
@@ -21,3 +25,4 @@ h4 {
 .lowFive {
     color: orangered;
 }
+
