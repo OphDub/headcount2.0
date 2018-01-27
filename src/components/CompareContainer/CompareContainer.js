@@ -9,15 +9,17 @@ const CompareContainer = ({ comparedDistricts, selectCard, comparisonObj }) => {
                                                                   key={district.location}
                                                                   id={district.location}
                                                                   selectCard={selectCard}/>)
+                                                                  console.log(renderedComparison)
 
   return (
     <section>
+      {renderedComparison[0]}
       <article>
         <h3>{comparisonArr[0]}</h3>
         <h4>{comparisonObj.compared}</h4>
         <h3>{comparisonArr[1]}</h3>
       </article>
-      {renderedComparison}
+      {renderedComparison[1]}
     </section>
   )
 }
