@@ -34,7 +34,7 @@ class App extends Component {
     const foundDistrict = this.state.allDistricts.find((district)=> district.location === id)
     const newFoundDistrictArray = [...this.state.comparedDistricts, foundDistrict]
     const stateLocations = this.state.comparedDistricts.map( district => district.location)
-    
+
     if (!stateLocations.includes(foundDistrict.location) && newFoundDistrictArray.length <= 2 ) {
       this.setState({ comparedDistricts: newFoundDistrictArray })
 
@@ -44,20 +44,20 @@ class App extends Component {
 
   compareCardData = (newFoundDistrictArray) => {
     if(newFoundDistrictArray.length === 2) {
-      const comparisionObj = masterDistrict.compareDistrictAverages(newFoundDistrictArray[0].location, 
+      const comparisonObj = masterDistrict.compareDistrictAverages(newFoundDistrictArray[0].location,
                                                                  newFoundDistrictArray[1].location);
-      this.setState({ comparisionObj })
+      this.setState({ comparisonObj })
     }
   }
-    
+
   render() {
     return (
       <div>
         <h1>Welcome To Headcount 2.0</h1>
         <Search filterDistricts={this.filterDistricts} />
-        <CompareContainer comparedDistricts={this.state.comparedDistricts} 
-                          selectCard={this.selectCard} 
-                          comparisionObj={this.state.comparisionObj} />
+        <CompareContainer comparedDistricts={this.state.comparedDistricts}
+                          selectCard={this.selectCard}
+                          comparisonObj={this.state.comparisonObj} />
         <CardContainer districts={this.state.allDistricts} selectCard={this.selectCard} />
       </div>
     );
