@@ -25,6 +25,11 @@ h4 {
 .cardContainer article:hover {
     box-shadow: 4px 4px 0px 0px rgba(22, 22, 87, 0.2);
 }
-.cardContainer article:active {
+
+.compareContainer.selected {
+  border: 3px solid #40c8e0;
+}
+
+.selected {
     border: 3px solid #40c8e0;
 }

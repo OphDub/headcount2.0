@@ -15,8 +15,6 @@ describe('APP', () => {
     expect(renderedComponent.state().comparisonObj).toEqual({})
   })
 
-  it('')
-
   it('when cards are clicked they should be stored in state and rendered to the page', () => {
     const renderedComponent = mount(<App />)
     const mockedCardArray = [
@@ -25,7 +23,6 @@ describe('APP', () => {
     ]
 
     renderedComponent.setState({allDistricts: mockedCardArray})
-    console.log(renderedComponent.debug())
 
     const firstDistrict = renderedComponent.find('article').first()
     const secondDistrict = renderedComponent.find('article').last()
