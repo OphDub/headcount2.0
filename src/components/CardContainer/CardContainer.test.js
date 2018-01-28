@@ -1,21 +1,16 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
 import CardContainer from './CardContainer';
 import Card from '../Card/Card';
 import { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-// import DistrictRepository from '../../helper';
-// import kinderData from '../../data/kindergartners_in_full_day_program';
 
 describe('CARD CONTAINER', () => {
   let wrapper;
-  // let masterDistrict;
   let mockSelectFunc;
   let mockAddCssFunc;
   let districtArr;
 
   beforeEach(() => {
-    // masterDistrict = new DistrictRepository(kinderData);
     mockSelectFunc = jest.fn();
     mockAddCssFunc = jest.fn();
     districtArr = [ { location: 'CAMPO RE-6',
@@ -77,14 +72,14 @@ describe('CARD CONTAINER', () => {
     expect(wrapper).toBeDefined()
   })
 
+  it('should match snap of cardContainer', () => {
+    expect(wrapper).toMatchSnapshot();
+  })
+
   it('should contain the correct number of Cards',() => {
     const districtsArrLength = districtArr.length
     expect(wrapper.find(Card).length).toEqual(districtsArrLength)
   });
-  
-  it('should match snap of cardContainer', () => {
-    expect(wrapper).toMatchSnapshot();
-  })
 
   it('should return correct last district card component',() => {
     let { location, data, id } = districtArr[3]
