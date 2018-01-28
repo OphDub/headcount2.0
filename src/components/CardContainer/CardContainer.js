@@ -5,11 +5,11 @@ import Card from '../Card/Card';
 
 const CardContainer = ({ districts, selectCard, comparedDistricts }) => {
   const addCss = (district) => {
-    const matched = comparedDistricts.find( card => {
+    const selectedDistrict = comparedDistricts.find( card => {
       return card.location === district.location
     })
 
-    return matched ? "selected" : "";
+    return selectedDistrict ? "selected" : "";
   }
 
   const renderedCards = districts.map((district) =>

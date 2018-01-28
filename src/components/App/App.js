@@ -58,23 +58,13 @@ class App extends Component {
     }
   }
 
-  // addCss = (district) => {
-  //   console.log(district)
-  //   // if(document.getElementById(id).className === "unselected" && document.getElementById(id).parentElement.className !== 'compareContainer') {
-  //   //   document.getElementById(id).setAttribute("class", "selected")
-
-  //   // } else if (document.getElementById(id).className === "selected" && document.getElementById(id).parentElement.className === 'cardContainer'){
-  //   //   document.getElementById(id).setAttribute("class", "unselected")
-  //   // }
-  // }
-
   render() {
     return (
       <div>
         <h1>Welcome To Headcount 2.0</h1>
         <Search filterDistricts={this.filterDistricts} />
-        <CompareContainer comparedDistricts={this.state.comparedDistricts} 
-                          selectCard={this.selectCard} 
+        <CompareContainer comparedDistricts={this.state.comparedDistricts}
+                          selectCard={this.selectCard}
                           comparisonObj={this.state.comparisonObj} />
         <CardContainer  districts={this.state.allDistricts}
                         selectCard={this.selectCard}
