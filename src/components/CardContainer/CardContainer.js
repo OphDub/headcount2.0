@@ -11,7 +11,7 @@ const CardContainer = ({ districts, selectCard }) => {
                selectCard={selectCard}/>)
 
   return (
-    <section>
+    <section className="cardContainer">
       {renderedCards}
     </section>
   )
