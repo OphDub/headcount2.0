@@ -35,6 +35,7 @@ class App extends Component {
     const newFoundDistrictArray = [...this.state.comparedDistricts, foundDistrict]
     const stateLocations = this.state.comparedDistricts.map( district => district.location)
 
+    this.addCss(id)
     if (!stateLocations.includes(foundDistrict.location) && newFoundDistrictArray.length <= 2 ) {
       this.setState({ comparedDistricts: newFoundDistrictArray })
 
@@ -43,13 +44,11 @@ class App extends Component {
       const oldArray = this.state.comparedDistricts
 
       oldArray.shift()
-
       const newArray = [...oldArray, foundDistrict]
 
       this.setState({ comparedDistricts: newArray });
     }
 
-    this.addCss(id)
   }
 
   compareCardData = (newFoundDistrictArray) => {
