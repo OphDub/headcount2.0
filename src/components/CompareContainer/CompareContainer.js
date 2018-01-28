@@ -7,9 +7,9 @@ const CompareContainer = ({ comparedDistricts, selectCard, comparisonObj }) => {
   const renderedComparison = comparedDistricts.map( district =>
                                                             <Card {...district}
                                                                   key={district.location}
+                                                                  addCss={'selected'}
                                                                   id={district.location}
                                                                   selectCard={selectCard}/>)
-                                                                  console.log(comparisonArr)
 
   return (
     <section className="compareContainer">

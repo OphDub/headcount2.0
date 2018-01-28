@@ -31,12 +31,10 @@ class App extends Component {
   }
 
   selectCard = (id) => {
-    // this.addCss(id)
     const foundDistrict = this.state.allDistricts.find((district)=> district.location === id)
     const newFoundDistrictArray = [...this.state.comparedDistricts, foundDistrict]
     const stateLocations = this.state.comparedDistricts.map( district => district.location)
 
-    this.addCss(id)
     if (!stateLocations.includes(foundDistrict.location) && newFoundDistrictArray.length <= 2 ) {
       this.setState({ comparedDistricts: newFoundDistrictArray })
 
@@ -60,14 +58,15 @@ class App extends Component {
     }
   }
 
-  addCss = (id) => {
-    if(document.getElementById(id).className === "unselected" && document.getElementById(id).parentElement.className !== 'compareContainer') {
-      document.getElementById(id).setAttribute("class", "selected")
+  // addCss = (district) => {
+  //   console.log(district)
+  //   // if(document.getElementById(id).className === "unselected" && document.getElementById(id).parentElement.className !== 'compareContainer') {
+  //   //   document.getElementById(id).setAttribute("class", "selected")
 
-    } else if (document.getElementById(id).className === "selected" && document.getElementById(id).parentElement.className === 'cardContainer'){
-      document.getElementById(id).setAttribute("class", "unselected")
-    }
-  }
+  //   // } else if (document.getElementById(id).className === "selected" && document.getElementById(id).parentElement.className === 'cardContainer'){
+  //   //   document.getElementById(id).setAttribute("class", "unselected")
+  //   // }
+  // }
 
   render() {
     return (
@@ -77,7 +76,9 @@ class App extends Component {
         <CompareContainer comparedDistricts={this.state.comparedDistricts} 
                           selectCard={this.selectCard} 
                           comparisonObj={this.state.comparisonObj} />
-        <CardContainer districts={this.state.allDistricts} selectCard={this.selectCard} addCss={this.addCss}/>
+        <CardContainer  districts={this.state.allDistricts}
+                        selectCard={this.selectCard}
+                        comparedDistricts={this.state.comparedDistricts}/>
       </div>
     );
   }
