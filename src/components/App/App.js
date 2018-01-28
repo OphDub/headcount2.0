@@ -31,6 +31,7 @@ class App extends Component {
   }
 
   selectCard = (id) => {
+    // this.addCss(id)
     const foundDistrict = this.state.allDistricts.find((district)=> district.location === id)
     const newFoundDistrictArray = [...this.state.comparedDistricts, foundDistrict]
     const stateLocations = this.state.comparedDistricts.map( district => district.location)
@@ -76,7 +77,7 @@ class App extends Component {
         <CompareContainer comparedDistricts={this.state.comparedDistricts} 
                           selectCard={this.selectCard} 
                           comparisonObj={this.state.comparisonObj} />
-        <CardContainer districts={this.state.allDistricts} selectCard={this.selectCard} />
+        <CardContainer districts={this.state.allDistricts} selectCard={this.selectCard} addCss={this.addCss}/>
       </div>
     );
   }

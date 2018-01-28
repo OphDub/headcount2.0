@@ -1,0 +1,508 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CARD CONTAINER should match snap of cardContainer 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    addCss={[Function]}
+    districts={
+        Array [
+            Object {
+              "data": Object {
+                "2004": 0,
+                "2005": 0,
+                "2006": 1,
+                "2007": 1,
+                "2008": 1,
+                "2009": 1,
+                "2010": 1,
+                "2011": 1,
+                "2012": 1,
+                "2013": 1,
+                "2014": 1,
+              },
+              "location": "CAMPO RE-6",
+            },
+            Object {
+              "data": Object {
+                "2004": 0.302,
+                "2005": 0.353,
+                "2006": 0.119,
+                "2007": 0.218,
+                "2008": 0.766,
+                "2009": 0.98,
+                "2010": 0.993,
+                "2011": 0.993,
+                "2012": 1,
+                "2013": 1,
+                "2014": 1,
+              },
+              "location": "CANON CITY RE-1",
+            },
+            Object {
+              "data": Object {
+                "2004": 0,
+                "2005": 0.105,
+                "2006": 0.045,
+                "2007": 0,
+                "2008": 1,
+                "2009": 1,
+                "2010": 1,
+                "2011": 1,
+                "2012": 1,
+                "2013": 1,
+                "2014": 1,
+              },
+              "location": "CENTENNIAL R-1",
+            },
+            Object {
+              "data": Object {
+                "2004": 1,
+                "2005": 1,
+                "2006": 1,
+                "2007": 1,
+                "2008": 1,
+                "2009": 1,
+                "2010": 1,
+                "2011": 1,
+                "2012": 1,
+                "2013": 1,
+                "2014": 1,
+              },
+              "location": "CENTER 26 JT",
+            },
+          ]
+    }
+    selectCard={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          addCss={[Function]}
+          data={
+                    Object {
+                              "2004": 0,
+                              "2005": 0,
+                              "2006": 1,
+                              "2007": 1,
+                              "2008": 1,
+                              "2009": 1,
+                              "2010": 1,
+                              "2011": 1,
+                              "2012": 1,
+                              "2013": 1,
+                              "2014": 1,
+                            }
+          }
+          id="CAMPO RE-6"
+          location="CAMPO RE-6"
+          selectCard={[Function]}
+/>,
+        <Card
+          addCss={[Function]}
+          data={
+                    Object {
+                              "2004": 0.302,
+                              "2005": 0.353,
+                              "2006": 0.119,
+                              "2007": 0.218,
+                              "2008": 0.766,
+                              "2009": 0.98,
+                              "2010": 0.993,
+                              "2011": 0.993,
+                              "2012": 1,
+                              "2013": 1,
+                              "2014": 1,
+                            }
+          }
+          id="CANON CITY RE-1"
+          location="CANON CITY RE-1"
+          selectCard={[Function]}
+/>,
+        <Card
+          addCss={[Function]}
+          data={
+                    Object {
+                              "2004": 0,
+                              "2005": 0.105,
+                              "2006": 0.045,
+                              "2007": 0,
+                              "2008": 1,
+                              "2009": 1,
+                              "2010": 1,
+                              "2011": 1,
+                              "2012": 1,
+                              "2013": 1,
+                              "2014": 1,
+                            }
+          }
+          id="CENTENNIAL R-1"
+          location="CENTENNIAL R-1"
+          selectCard={[Function]}
+/>,
+        <Card
+          addCss={[Function]}
+          data={
+                    Object {
+                              "2004": 1,
+                              "2005": 1,
+                              "2006": 1,
+                              "2007": 1,
+                              "2008": 1,
+                              "2009": 1,
+                              "2010": 1,
+                              "2011": 1,
+                              "2012": 1,
+                              "2013": 1,
+                              "2014": 1,
+                            }
+          }
+          id="CENTER 26 JT"
+          location="CENTER 26 JT"
+          selectCard={[Function]}
+/>,
+      ],
+      "className": "cardContainer",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "CAMPO RE-6",
+        "nodeType": "function",
+        "props": Object {
+          "addCss": [Function],
+          "data": Object {
+            "2004": 0,
+            "2005": 0,
+            "2006": 1,
+            "2007": 1,
+            "2008": 1,
+            "2009": 1,
+            "2010": 1,
+            "2011": 1,
+            "2012": 1,
+            "2013": 1,
+            "2014": 1,
+          },
+          "id": "CAMPO RE-6",
+          "location": "CAMPO RE-6",
+          "selectCard": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "CANON CITY RE-1",
+        "nodeType": "function",
+        "props": Object {
+          "addCss": [Function],
+          "data": Object {
+            "2004": 0.302,
+            "2005": 0.353,
+            "2006": 0.119,
+            "2007": 0.218,
+            "2008": 0.766,
+            "2009": 0.98,
+            "2010": 0.993,
+            "2011": 0.993,
+            "2012": 1,
+            "2013": 1,
+            "2014": 1,
+          },
+          "id": "CANON CITY RE-1",
+          "location": "CANON CITY RE-1",
+          "selectCard": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "CENTENNIAL R-1",
+        "nodeType": "function",
+        "props": Object {
+          "addCss": [Function],
+          "data": Object {
+            "2004": 0,
+            "2005": 0.105,
+            "2006": 0.045,
+            "2007": 0,
+            "2008": 1,
+            "2009": 1,
+            "2010": 1,
+            "2011": 1,
+            "2012": 1,
+            "2013": 1,
+            "2014": 1,
+          },
+          "id": "CENTENNIAL R-1",
+          "location": "CENTENNIAL R-1",
+          "selectCard": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "CENTER 26 JT",
+        "nodeType": "function",
+        "props": Object {
+          "addCss": [Function],
+          "data": Object {
+            "2004": 1,
+            "2005": 1,
+            "2006": 1,
+            "2007": 1,
+            "2008": 1,
+            "2009": 1,
+            "2010": 1,
+            "2011": 1,
+            "2012": 1,
+            "2013": 1,
+            "2014": 1,
+          },
+          "id": "CENTER 26 JT",
+          "location": "CENTER 26 JT",
+          "selectCard": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            addCss={[Function]}
+            data={
+                        Object {
+                                    "2004": 0,
+                                    "2005": 0,
+                                    "2006": 1,
+                                    "2007": 1,
+                                    "2008": 1,
+                                    "2009": 1,
+                                    "2010": 1,
+                                    "2011": 1,
+                                    "2012": 1,
+                                    "2013": 1,
+                                    "2014": 1,
+                                  }
+            }
+            id="CAMPO RE-6"
+            location="CAMPO RE-6"
+            selectCard={[Function]}
+/>,
+          <Card
+            addCss={[Function]}
+            data={
+                        Object {
+                                    "2004": 0.302,
+                                    "2005": 0.353,
+                                    "2006": 0.119,
+                                    "2007": 0.218,
+                                    "2008": 0.766,
+                                    "2009": 0.98,
+                                    "2010": 0.993,
+                                    "2011": 0.993,
+                                    "2012": 1,
+                                    "2013": 1,
+                                    "2014": 1,
+                                  }
+            }
+            id="CANON CITY RE-1"
+            location="CANON CITY RE-1"
+            selectCard={[Function]}
+/>,
+          <Card
+            addCss={[Function]}
+            data={
+                        Object {
+                                    "2004": 0,
+                                    "2005": 0.105,
+                                    "2006": 0.045,
+                                    "2007": 0,
+                                    "2008": 1,
+                                    "2009": 1,
+                                    "2010": 1,
+                                    "2011": 1,
+                                    "2012": 1,
+                                    "2013": 1,
+                                    "2014": 1,
+                                  }
+            }
+            id="CENTENNIAL R-1"
+            location="CENTENNIAL R-1"
+            selectCard={[Function]}
+/>,
+          <Card
+            addCss={[Function]}
+            data={
+                        Object {
+                                    "2004": 1,
+                                    "2005": 1,
+                                    "2006": 1,
+                                    "2007": 1,
+                                    "2008": 1,
+                                    "2009": 1,
+                                    "2010": 1,
+                                    "2011": 1,
+                                    "2012": 1,
+                                    "2013": 1,
+                                    "2014": 1,
+                                  }
+            }
+            id="CENTER 26 JT"
+            location="CENTER 26 JT"
+            selectCard={[Function]}
+/>,
+        ],
+        "className": "cardContainer",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "CAMPO RE-6",
+          "nodeType": "function",
+          "props": Object {
+            "addCss": [Function],
+            "data": Object {
+              "2004": 0,
+              "2005": 0,
+              "2006": 1,
+              "2007": 1,
+              "2008": 1,
+              "2009": 1,
+              "2010": 1,
+              "2011": 1,
+              "2012": 1,
+              "2013": 1,
+              "2014": 1,
+            },
+            "id": "CAMPO RE-6",
+            "location": "CAMPO RE-6",
+            "selectCard": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "CANON CITY RE-1",
+          "nodeType": "function",
+          "props": Object {
+            "addCss": [Function],
+            "data": Object {
+              "2004": 0.302,
+              "2005": 0.353,
+              "2006": 0.119,
+              "2007": 0.218,
+              "2008": 0.766,
+              "2009": 0.98,
+              "2010": 0.993,
+              "2011": 0.993,
+              "2012": 1,
+              "2013": 1,
+              "2014": 1,
+            },
+            "id": "CANON CITY RE-1",
+            "location": "CANON CITY RE-1",
+            "selectCard": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "CENTENNIAL R-1",
+          "nodeType": "function",
+          "props": Object {
+            "addCss": [Function],
+            "data": Object {
+              "2004": 0,
+              "2005": 0.105,
+              "2006": 0.045,
+              "2007": 0,
+              "2008": 1,
+              "2009": 1,
+              "2010": 1,
+              "2011": 1,
+              "2012": 1,
+              "2013": 1,
+              "2014": 1,
+            },
+            "id": "CENTENNIAL R-1",
+            "location": "CENTENNIAL R-1",
+            "selectCard": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "CENTER 26 JT",
+          "nodeType": "function",
+          "props": Object {
+            "addCss": [Function],
+            "data": Object {
+              "2004": 1,
+              "2005": 1,
+              "2006": 1,
+              "2007": 1,
+              "2008": 1,
+              "2009": 1,
+              "2010": 1,
+              "2011": 1,
+              "2012": 1,
+              "2013": 1,
+              "2014": 1,
+            },
+            "id": "CENTER 26 JT",
+            "location": "CENTER 26 JT",
+            "selectCard": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
