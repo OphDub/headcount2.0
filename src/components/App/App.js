@@ -40,14 +40,12 @@ class App extends Component {
 
       this.compareCardData(newFoundDistrictArray);
     } else {
-      const oldArray = this.state.comparedDistricts
-
-      oldArray.shift()
-      const newArray = [...oldArray, foundDistrict]
-
-      this.setState({ comparedDistricts: newArray });
+      const newestCardData = newFoundDistrictArray[2]
+      const newestCardDataUpdate = [newestCardData]
+      
+      this.setState({ comparedDistricts: newestCardDataUpdate,
+                      comparisonObj: {} });
     }
-
   }
 
   compareCardData = (newFoundDistrictArray) => {
@@ -59,6 +57,7 @@ class App extends Component {
   }
 
   render() {
+    console.log('comparisonObj',this.state.comparisonObj)
     return (
       <div>
         <h1>Welcome To Headcount 2.0</h1>
