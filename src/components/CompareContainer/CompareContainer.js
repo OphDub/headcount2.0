@@ -14,11 +14,14 @@ const CompareContainer = ({ comparedDistricts, selectCard, comparisonObj }) => {
   return (
     <section className="compareContainer">
       {renderedComparison[0]}
-      <article className="comparisonCard">
-        <div>{comparisonArr[0]}</div>
-        <div>{comparisonObj.compared}</div>
-        <div>{comparisonArr[1]}</div>
-      </article>
+      {renderedComparison.length > 0 &&
+
+        <article className="comparisonCard">
+          <div>{comparisonArr[0]}</div>
+          <div>{comparisonObj.compared}</div>
+          <div>{comparisonArr[1]}</div>
+        </article>
+      }
       {renderedComparison[1]}
     </section>
   )
