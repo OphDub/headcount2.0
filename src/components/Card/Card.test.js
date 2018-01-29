@@ -32,12 +32,12 @@ describe('CARD', () => {
   });
 
   it('should have specific styling on list items depending on their value', () => {
-    expect(wrapper.find('ul').children().first().hasClass('lowFive')).toEqual(true);
-    expect(wrapper.find('ul').children().last().hasClass('highFive')).toEqual(true);
+    expect(wrapper.find('ul').children().first().hasClass('four')).toEqual(true);
+    expect(wrapper.find('ul').children().last().hasClass('eight')).toEqual(true);
   });
 
   it('should call the selectCard method on click', () => {
-    wrapper.simulate('click');
+    wrapper.find('article').simulate('click');
 
     expect(mockFn.mock.calls.length).toEqual(1);
     expect(mockFn.mock.calls).toEqual([[mockId]]);

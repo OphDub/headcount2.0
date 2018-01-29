@@ -19,7 +19,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <h1>
-          Welcome To Headcount 2.0
+          HEADCOUNT 2.0
 </h1>,
         <Search
           filterDistricts={[Function]}
@@ -2942,10 +2942,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Welcome To Headcount 2.0",
+          "children": "HEADCOUNT 2.0",
         },
         "ref": null,
-        "rendered": "Welcome To Headcount 2.0",
+        "rendered": "HEADCOUNT 2.0",
         "type": "h1",
       },
       Object {
@@ -5893,7 +5893,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <h1>
-            Welcome To Headcount 2.0
+            HEADCOUNT 2.0
 </h1>,
           <Search
             filterDistricts={[Function]}
@@ -8816,10 +8816,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Welcome To Headcount 2.0",
+            "children": "HEADCOUNT 2.0",
           },
           "ref": null,
-          "rendered": "Welcome To Headcount 2.0",
+          "rendered": "HEADCOUNT 2.0",
           "type": "h1",
         },
         Object {
