@@ -1,17 +1,24 @@
 article {
     border: 1px solid lightslategray;
-    height: 300px;
+    height: 325px;
     width: 200px;
     margin: 10px;
+    font-family: 'Francois One', sans-serif;
 }
 
 ul {
     margin: auto;
-    padding-left: 70px;
+    padding-left: 60px;
+    list-style-type: none;
 }
 
 h4 {
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 10px;
     text-align: center;
+    background-color: rgb(74, 169, 241);
+    color: rgb(232, 238, 241);
 }
 
 .highFive {
@@ -27,9 +34,9 @@ h4 {
 }
 
 .compareContainer.selected {
-  border: 3px solid #40c8e0;
+  border: 3px solid rgb(57, 185, 231);
 }
 
 .selected {
-    border: 3px solid #40c8e0;
+    border: 3px solid rgb(57, 185, 231);
 }
