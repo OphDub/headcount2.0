@@ -1,5 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Francois+One");
+
+h1 {
+    font-size: 45px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 h1, form {
     text-align: center;
+    font-family: 'Francois One', sans-serif;
 }
 
 form {
@@ -8,6 +18,8 @@ form {
 }
 
 input {
+    font-size: 16px;
+    text-align: center;
     height: 30px;
     width: 300px;
 }
