@@ -9,8 +9,8 @@ class DistrictRepository {
       const yearTimeFrame = dataPoint.TimeFrame;
       if (!accu[upCaseLocation]) {
         accu[upCaseLocation] = {
-            location: upCaseLocation,
-            data: {}
+          location: upCaseLocation,
+          data: {}
         };
       }
 
