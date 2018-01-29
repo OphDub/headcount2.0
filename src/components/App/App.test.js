@@ -12,8 +12,14 @@ describe('APP', () => {
 
   beforeEach(() => {
     wrapper = shallow(<App />)
-    mockDist1 = { data: {2004: 0.24, 2005: 0.278, 2006: 0.337, 2007: 0.395, 2008: 0.536, 2009: 0.598, 2010: 0.64, 2011: 0.672, 2012: 0.695, 2013: 0.703, 2014: 0.741}, location: "COLORADO" }
-    mockDist2 = { data: {2004: 0.069, 2005: 0.509, 2006: 0.638,2007: 0.994, 2008: 0.992, 2009: 1, 2010: 0.993, 2011: 0.994, 2012: 0.993, 2013: 0.989, 2014: 0.994}, location: "COLORADO SPRINGS 11" }
+    mockDist1 = {
+      data: {2004: 0.24, 2005: 0.278, 2006: 0.337, 2007: 0.395, 2008: 0.536, 2009: 0.598, 2010: 0.64, 2011: 0.672, 2012: 0.695, 2013: 0.703, 2014: 0.741},
+      location: "COLORADO"
+    }
+    mockDist2 = {
+      data: {2004: 0.069, 2005: 0.509, 2006: 0.638,2007: 0.994, 2008: 0.992, 2009: 1, 2010: 0.993, 2011: 0.994, 2012: 0.993, 2013: 0.989, 2014: 0.994},
+      location: "COLORADO SPRINGS 11"
+    }
   })
 
   it('should match the snapshot', () => {
@@ -73,41 +79,44 @@ describe('APP', () => {
 
   it.skip('when cards are clicked they should be stored in state and rendered to the page', () => {
     const wrapper = mount(<App />)
-    const mockedCardArray = [
-      { location: "COLORADO", data: { 2004: 1, 2005: 0.5, 2006: 0.25}},
-      { location: "ACADEMY", data: { 2004: 0.75, 2005: 0.25, 2006: 1 }}
-    ]
+    const lastMockDist = {
+      data: {2004:0, 2005:1, 2006:1, 2007:1 ,2008:1,2009:1,2010:1,2011:1,2012:1,2013:1,2014:1},
+      location: "YUMA SCHOOL DISTRICT 1"
+    }
+    const mockedCardArray = [mockDist1, lastMockDist]
 
-    const firstDistrict = wrapper.find('#BUENA')
-    const secondDistrict = wrapper.find('#BETHUNE')
+    const firstDistrict = wrapper.find('article').first()
+    const secondDistrict = wrapper.find('article').last()
 
     firstDistrict.simulate('click')
     secondDistrict.simulate('click')
 
     expect(wrapper.state().comparedDistricts).toEqual(mockedCardArray)
-    expect(wrapper.find('search').children().length).toEqual(3)
+    // expect(wrapper.find('compareContainer').children().length).toEqual(3)
   })
 
-  it.skip('when two cards are compared it should create a comparison object in state', () => {
+  it.only('when two cards are compared it should create a comparison object in state', () => {
     const wrapper = mount(<App />)
-    const mockedCardArray = [
-      { location: "COLORADO", data: { 2004: 1, 2005: 0.5, 2006: 0.25}},
-      { location: "ACADEMY", data: { 2004: 0.75, 2005: 0.25, 2006: 1 }}
-    ]
+    const lastMockDist = {
+      data: {2004:0, 2005:1, 2006:1, 2007:1 ,2008:1,2009:1,2010:1,2011:1,2012:1,2013:1,2014:1},
+      location: "YUMA SCHOOL DISTRICT 1"
+    }
+    const mockedCardArray = [mockDist1, lastMockDist]
+    const mockCompObj = {
+      "YUMA SCHOOL DISTRICT 1": 0.909,
+      "COLORADO": 0.53,
+      "compared": 0.583
+    }
 
-    wrapper.setState({allDistricts: mockedCardArray})
     const firstDistrict = wrapper.find('article').first()
     const secondDistrict = wrapper.find('article').last()
-    const mockCompObj = {
-      "ACADEMY": 0.666,
-      "COLORADO": 0.583,
-      "compared": 0.875
-    }
 
     firstDistrict.simulate('click')
     secondDistrict.simulate('click')
 
     expect(wrapper.state().comparisonObj).toEqual(mockCompObj)
+    expect(wrapper.find('article.selected').last().hasClass('selected')).toEqual(true)
+    expect(wrapper.find('article.selected').length).toEqual(4)
   })
 })
 
