@@ -2,7 +2,6 @@ import React from 'react';
 import CardContainer from './CardContainer';
 import Card from '../Card/Card';
 import { shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 
 describe('CARD CONTAINER', () => {
   let wrapper;
@@ -85,7 +84,9 @@ describe('CARD CONTAINER', () => {
   it('should return correct last district card component', () => {
     let { location, data, id } = districtArr[3];
     expect(wrapper.find(Card).get(3).props.location).toEqual("CENTER 26 JT");
-    expect(wrapper.find(Card).get(3).props.data).toEqual({"2004": 1, "2005": 1, "2006": 1, "2007": 1, "2008": 1, "2009": 1, "2010": 1, "2011": 1, "2012": 1, "2013": 1, "2014": 1});
+    expect(wrapper.find(Card).get(3).props.data).toEqual(
+      {"2004": 1, "2005": 1, "2006": 1, "2007": 1, "2008": 1, "2009": 1,
+        "2010": 1, "2011": 1, "2012": 1, "2013": 1, "2014": 1});
     expect(wrapper.find(Card).get(3).props.id).toEqual("CENTER 26 JT");
   });
 });
