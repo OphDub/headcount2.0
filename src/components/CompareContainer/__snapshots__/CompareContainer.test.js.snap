@@ -94,7 +94,6 @@ ShallowWrapper {
                               CAMPO RE-6
                                
                               <br />
-                               
                               <span>
                                         Average Enrollment:  
                                         0.657
@@ -111,7 +110,6 @@ ShallowWrapper {
                               CANON CITY RE-1
                                
                               <br />
-                               
                               <span>
                                         Average Enrollment:  
                                         0.709
@@ -185,7 +183,6 @@ ShallowWrapper {
                             CAMPO RE-6
                              
                             <br />
-                             
                             <span>
                                           Average Enrollment:  
                                           0.657
@@ -202,7 +199,6 @@ ShallowWrapper {
                             CANON CITY RE-1
                              
                             <br />
-                             
                             <span>
                                           Average Enrollment:  
                                           0.709
@@ -225,7 +221,6 @@ ShallowWrapper {
                 CAMPO RE-6
                  
                 <br />
-                 
                 <span>
                                 Average Enrollment:  
                                 0.657
@@ -235,14 +230,13 @@ ShallowWrapper {
             "ref": null,
             "rendered": Object {
               "instance": null,
-              "key": undefined,
+              "key": "0",
               "nodeType": "host",
               "props": Object {
                 "children": Array [
                   "CAMPO RE-6",
                   " ",
                   <br />,
-                  " ",
                   <span>
                     Average Enrollment:  
                     0.657
@@ -263,7 +257,6 @@ ShallowWrapper {
                   "rendered": null,
                   "type": "br",
                 },
-                " ",
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -308,7 +301,6 @@ ShallowWrapper {
                 CANON CITY RE-1
                  
                 <br />
-                 
                 <span>
                                 Average Enrollment:  
                                 0.709
@@ -318,14 +310,13 @@ ShallowWrapper {
             "ref": null,
             "rendered": Object {
               "instance": null,
-              "key": undefined,
+              "key": "1",
               "nodeType": "host",
               "props": Object {
                 "children": Array [
                   "CANON CITY RE-1",
                   " ",
                   <br />,
-                  " ",
                   <span>
                     Average Enrollment:  
                     0.709
@@ -346,7 +337,6 @@ ShallowWrapper {
                   "rendered": null,
                   "type": "br",
                 },
-                " ",
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -440,7 +430,6 @@ ShallowWrapper {
                                     CAMPO RE-6
                                      
                                     <br />
-                                     
                                     <span>
                                                 Average Enrollment:  
                                                 0.657
@@ -457,7 +446,6 @@ ShallowWrapper {
                                     CANON CITY RE-1
                                      
                                     <br />
-                                     
                                     <span>
                                                 Average Enrollment:  
                                                 0.709
@@ -531,7 +519,6 @@ ShallowWrapper {
                                 CAMPO RE-6
                                  
                                 <br />
-                                 
                                 <span>
                                                 Average Enrollment:  
                                                 0.657
@@ -548,7 +535,6 @@ ShallowWrapper {
                                 CANON CITY RE-1
                                  
                                 <br />
-                                 
                                 <span>
                                                 Average Enrollment:  
                                                 0.709
@@ -571,7 +557,6 @@ ShallowWrapper {
                   CAMPO RE-6
                    
                   <br />
-                   
                   <span>
                                     Average Enrollment:  
                                     0.657
@@ -581,14 +566,13 @@ ShallowWrapper {
               "ref": null,
               "rendered": Object {
                 "instance": null,
-                "key": undefined,
+                "key": "0",
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
                     "CAMPO RE-6",
                     " ",
                     <br />,
-                    " ",
                     <span>
                       Average Enrollment:  
                       0.657
@@ -609,7 +593,6 @@ ShallowWrapper {
                     "rendered": null,
                     "type": "br",
                   },
-                  " ",
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -654,7 +637,6 @@ ShallowWrapper {
                   CANON CITY RE-1
                    
                   <br />
-                   
                   <span>
                                     Average Enrollment:  
                                     0.709
@@ -664,14 +646,13 @@ ShallowWrapper {
               "ref": null,
               "rendered": Object {
                 "instance": null,
-                "key": undefined,
+                "key": "1",
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
                     "CANON CITY RE-1",
                     " ",
                     <br />,
-                    " ",
                     <span>
                       Average Enrollment:  
                       0.709
@@ -692,7 +673,6 @@ ShallowWrapper {
                     "rendered": null,
                     "type": "br",
                   },
-                  " ",
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -853,7 +833,6 @@ ShallowWrapper {
                               CAMPO RE-6
                                
                               <br />
-                               
                               <span>
                                         Average Enrollment:  
                                         0.657
@@ -870,7 +849,6 @@ ShallowWrapper {
                               CANON CITY RE-1
                                
                               <br />
-                               
                               <span>
                                         Average Enrollment:  
                                         0.709
@@ -944,7 +922,6 @@ ShallowWrapper {
                             CAMPO RE-6
                              
                             <br />
-                             
                             <span>
                                           Average Enrollment:  
                                           0.657
@@ -961,7 +938,6 @@ ShallowWrapper {
                             CANON CITY RE-1
                              
                             <br />
-                             
                             <span>
                                           Average Enrollment:  
                                           0.709
@@ -984,7 +960,6 @@ ShallowWrapper {
                 CAMPO RE-6
                  
                 <br />
-                 
                 <span>
                                 Average Enrollment:  
                                 0.657
@@ -994,14 +969,13 @@ ShallowWrapper {
             "ref": null,
             "rendered": Object {
               "instance": null,
-              "key": undefined,
+              "key": "0",
               "nodeType": "host",
               "props": Object {
                 "children": Array [
                   "CAMPO RE-6",
                   " ",
                   <br />,
-                  " ",
                   <span>
                     Average Enrollment:  
                     0.657
@@ -1022,7 +996,6 @@ ShallowWrapper {
                   "rendered": null,
                   "type": "br",
                 },
-                " ",
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -1067,7 +1040,6 @@ ShallowWrapper {
                 CANON CITY RE-1
                  
                 <br />
-                 
                 <span>
                                 Average Enrollment:  
                                 0.709
@@ -1077,14 +1049,13 @@ ShallowWrapper {
             "ref": null,
             "rendered": Object {
               "instance": null,
-              "key": undefined,
+              "key": "1",
               "nodeType": "host",
               "props": Object {
                 "children": Array [
                   "CANON CITY RE-1",
                   " ",
                   <br />,
-                  " ",
                   <span>
                     Average Enrollment:  
                     0.709
@@ -1105,7 +1076,6 @@ ShallowWrapper {
                   "rendered": null,
                   "type": "br",
                 },
-                " ",
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -1199,7 +1169,6 @@ ShallowWrapper {
                                     CAMPO RE-6
                                      
                                     <br />
-                                     
                                     <span>
                                                 Average Enrollment:  
                                                 0.657
@@ -1216,7 +1185,6 @@ ShallowWrapper {
                                     CANON CITY RE-1
                                      
                                     <br />
-                                     
                                     <span>
                                                 Average Enrollment:  
                                                 0.709
@@ -1290,7 +1258,6 @@ ShallowWrapper {
                                 CAMPO RE-6
                                  
                                 <br />
-                                 
                                 <span>
                                                 Average Enrollment:  
                                                 0.657
@@ -1307,7 +1274,6 @@ ShallowWrapper {
                                 CANON CITY RE-1
                                  
                                 <br />
-                                 
                                 <span>
                                                 Average Enrollment:  
                                                 0.709
@@ -1330,7 +1296,6 @@ ShallowWrapper {
                   CAMPO RE-6
                    
                   <br />
-                   
                   <span>
                                     Average Enrollment:  
                                     0.657
@@ -1340,14 +1305,13 @@ ShallowWrapper {
               "ref": null,
               "rendered": Object {
                 "instance": null,
-                "key": undefined,
+                "key": "0",
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
                     "CAMPO RE-6",
                     " ",
                     <br />,
-                    " ",
                     <span>
                       Average Enrollment:  
                       0.657
@@ -1368,7 +1332,6 @@ ShallowWrapper {
                     "rendered": null,
                     "type": "br",
                   },
-                  " ",
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -1413,7 +1376,6 @@ ShallowWrapper {
                   CANON CITY RE-1
                    
                   <br />
-                   
                   <span>
                                     Average Enrollment:  
                                     0.709
@@ -1423,14 +1385,13 @@ ShallowWrapper {
               "ref": null,
               "rendered": Object {
                 "instance": null,
-                "key": undefined,
+                "key": "1",
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
                     "CANON CITY RE-1",
                     " ",
                     <br />,
-                    " ",
                     <span>
                       Average Enrollment:  
                       0.709
@@ -1451,7 +1412,6 @@ ShallowWrapper {
                     "rendered": null,
                     "type": "br",
                   },
-                  " ",
                   Object {
                     "instance": null,
                     "key": undefined,

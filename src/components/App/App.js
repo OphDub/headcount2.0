@@ -36,7 +36,9 @@ class App extends Component {
     const stateLocations = this.state.comparedDistricts.map( district =>
       district.location);
 
-    if (!stateLocations.includes(foundDist.location) &&
+    if (stateLocations.includes(foundDist.location)) {
+      this.state.comparedDistricts.pop(foundDist.location)
+    } else if (!stateLocations.includes(foundDist.location) &&
       newFoundArray.length <= 2 ) {
       this.setState({ comparedDistricts: newFoundArray });
 
