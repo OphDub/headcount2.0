@@ -34,7 +34,7 @@ const CompareContainer = ({ comparedDistricts, selectCard, comparisonObj }) => {
 };
 
 CompareContainer.propTypes = {
-  comparedDistricts: PropTypes.object,	
+  comparedDistricts: PropTypes.arrayOf(PropTypes.object),
   selectCard: PropTypes.func,
   comparisonObj: PropTypes.object
 };
