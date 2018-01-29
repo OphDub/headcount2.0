@@ -110,7 +110,7 @@ describe('APP', () => {
   });
 
 
-  it.skip('when cards are clicked they should be stored in state and rendered to the page', () => {
+  it('when cards are clicked they should be stored in state and rendered to the page', () => {
     const wrapper = mount(<App />);
     const lastMockDist = {
       data: {2004:0,

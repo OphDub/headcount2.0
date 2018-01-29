@@ -30,7 +30,7 @@ Card.propTypes = {
   id: string.isRequired,
   location: string.isRequired,
   data: object.isRequired,
-  addCss: func.isRequired,
+  addCss: string,
   selectCard: func.isRequired
 };
 
