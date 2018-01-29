@@ -18,7 +18,7 @@ class Search extends Component {
 
   render() {
     return (
-      <form>
+      <form className="search">
         <input  type="text"
                 placeholder="Search by District Name"
                 onChange={this.handleInput}/>
