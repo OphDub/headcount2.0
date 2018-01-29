@@ -1,7 +1,7 @@
+/* eslint-disable */
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import App from './App';
-import Card from '../Card/Card';
 import DistrictRepository from '../../helper';
 import kinderData from '../../data/kindergartners_in_full_day_program';
 
@@ -13,11 +13,31 @@ describe('APP', () => {
   beforeEach(() => {
     wrapper = shallow(<App />);
     mockDist1 = {
-      data: {2004: 0.24, 2005: 0.278, 2006: 0.337, 2007: 0.395, 2008: 0.536, 2009: 0.598, 2010: 0.64, 2011: 0.672, 2012: 0.695, 2013: 0.703, 2014: 0.741},
+      data: {2004: 0.24,
+             2005: 0.278,
+             2006: 0.337,
+             2007: 0.395,
+             2008: 0.536,
+             2009: 0.598,
+             2010: 0.64,
+             2011: 0.672,
+             2012: 0.695,
+             2013: 0.703,
+             2014: 0.741},
       location: "COLORADO"
     };
     mockDist2 = {
-      data: {2004: 0.069, 2005: 0.509, 2006: 0.638, 2007: 0.994, 2008: 0.992, 2009: 1, 2010: 0.993, 2011: 0.994, 2012: 0.993, 2013: 0.989, 2014: 0.994},
+      data: {2004: 0.069,
+             2005: 0.509,
+             2006: 0.638,
+             2007: 0.994,
+             2008: 0.992,
+             2009: 1,
+             2010: 0.993,
+             2011: 0.994,
+             2012: 0.993,
+             2013: 0.989,
+             2014: 0.994},
       location: "COLORADO SPRINGS 11"
     };
   });
@@ -49,7 +69,19 @@ describe('APP', () => {
   });
 
   it('should be able to select only two objects from the allDistricts array and store them in the comparedDistricts array in state', () => {
-    const mockDist3 = { data: { 2004: 0.302, 2005: 0.267, 2006: 0.354, 2007: 0.392, 2008: 0.385, 2009: 0.39, 2010: 0.436, 2011: 0.489, 2012: 0.479, 2013: 0.488, 2014: 0.49}, location: "ACADEMY 20" };
+    const mockDist3 = { data: { 2004: 0.302,
+                                2005: 0.267,
+                                2006: 0.354,
+                                2007: 0.392,
+                                2008: 0.385,
+                                2009: 0.39,
+                                2010: 0.436,
+                                2011: 0.489,
+                                2012: 0.479,
+                                2013: 0.488,
+                                2014: 0.49},
+                        location: "ACADEMY 20"
+                      };
 
     wrapper.instance().selectCard('COLORADO');
     wrapper.instance().selectCard('COLORADO SPRINGS 11');
@@ -81,7 +113,17 @@ describe('APP', () => {
   it.skip('when cards are clicked they should be stored in state and rendered to the page', () => {
     const wrapper = mount(<App />);
     const lastMockDist = {
-      data: {2004:0, 2005:1, 2006:1, 2007:1, 2008:1, 2009:1, 2010:1, 2011:1, 2012:1, 2013:1, 2014:1},
+      data: {2004:0,
+             2005:1,
+             2006:1,
+             2007:1,
+             2008:1,
+             2009:1,
+             2010:1,
+             2011:1,
+             2012:1,
+             2013:1,
+             2014:1},
       location: "YUMA SCHOOL DISTRICT 1"
     };
     const mockedCardArray = [mockDist1, lastMockDist];
@@ -100,7 +142,17 @@ describe('APP', () => {
   it('when two cards are compared it should create a comparison object in state', () => {
     const wrapper = mount(<App />)
     const lastMockDist = {
-      data: {2004:0, 2005:1, 2006:1, 2007:1, 2008:1, 2009:1, 2010:1, 2011:1, 2012:1, 2013:1, 2014:1},
+      data: {2004:0,
+             2005:1,
+             2006:1,
+             2007:1,
+             2008:1,
+             2009:1,
+             2010:1,
+             2011:1,
+             2012:1,
+             2013:1,
+             2014:1},
       location: "YUMA SCHOOL DISTRICT 1"
     };
     const mockedCardArray = [mockDist1, lastMockDist];

@@ -5,7 +5,6 @@ import CardContainer from '../CardContainer/CardContainer';
 import CompareContainer from '../CompareContainer/CompareContainer';
 import DistrictRepository from '../../helper';
 import kinderData from '../../data/kindergartners_in_full_day_program';
-import { fdatasync } from 'fs';
 const masterDistrict = new DistrictRepository(kinderData);
 
 class App extends Component {
@@ -31,16 +30,19 @@ class App extends Component {
   }
 
   selectCard = (id) => {
-    const foundDistrict = this.state.allDistricts.find((district)=> district.location === id);
-    const newFoundDistrictArray = [...this.state.comparedDistricts, foundDistrict];
-    const stateLocations = this.state.comparedDistricts.map( district => district.location);
+    const foundDist = this.state.allDistricts.find((district)=>
+      district.location === id);
+    const newFoundArray = [...this.state.comparedDistricts, foundDist];
+    const stateLocations = this.state.comparedDistricts.map( district =>
+      district.location);
 
-    if (!stateLocations.includes(foundDistrict.location) && newFoundDistrictArray.length <= 2 ) {
-      this.setState({ comparedDistricts: newFoundDistrictArray });
+    if (!stateLocations.includes(foundDist.location) &&
+      newFoundArray.length <= 2 ) {
+      this.setState({ comparedDistricts: newFoundArray });
 
-      this.compareCardData(newFoundDistrictArray);
+      this.compareCardData(newFoundArray);
     } else {
-      const newestCardData = newFoundDistrictArray[2];
+      const newestCardData = newFoundArray[2];
       const newestCardDataUpdate = [newestCardData];
 
       this.setState({ comparedDistricts: newestCardDataUpdate,
@@ -48,10 +50,11 @@ class App extends Component {
     }
   }
 
-  compareCardData = (newFoundDistrictArray) => {
-    if (newFoundDistrictArray.length === 2) {
-      const comparisonObj = masterDistrict.compareDistrictAverages(newFoundDistrictArray[0].location, 
-        newFoundDistrictArray[1].location);
+  compareCardData = (newFoundArray) => {
+    if (newFoundArray.length === 2) {
+      const comparisonObj = masterDistrict.compareDistrictAverages(
+        newFoundArray[0].location,
+        newFoundArray[1].location);
       this.setState({ comparisonObj });
     }
   }
