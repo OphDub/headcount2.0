@@ -7,7 +7,10 @@ const CompareContainer = ({ comparedDistricts, selectCard, comparisonObj }) => {
   const averageComparison = comparisonObj.compared ?
     "Combined Average:  " + comparisonObj.compared
     : null;
-  const comparisonArr = Object.entries(comparisonObj).map( (entry) => <div className="displayData">{entry[0]} <br/> <span>Average Enrollment:  {entry[1]}</span></div> );
+  const comparisonArr = Object.entries(comparisonObj).map( (entry, index) =>
+    <div className="displayData" key={index}>{entry[0]} <br/>
+      <span>Average Enrollment:  {entry[1]}</span>
+    </div> );
   const renderedComparison = comparedDistricts.map( district =>
     <Card {...district}
       key={district.location}
