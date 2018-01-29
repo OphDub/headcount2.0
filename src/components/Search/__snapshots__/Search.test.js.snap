@@ -24,6 +24,7 @@ ShallowWrapper {
         placeholder="Search by District Name"
         type="text"
 />,
+      "className": "search",
     },
     "ref": null,
     "rendered": Object {
@@ -52,6 +53,7 @@ ShallowWrapper {
           placeholder="Search by District Name"
           type="text"
 />,
+        "className": "search",
       },
       "ref": null,
       "rendered": Object {
