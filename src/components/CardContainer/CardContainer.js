@@ -1,5 +1,5 @@
 import React from 'react';
-import { arrayOf, shape, string, object } from 'prop-types';
+import PropTypes, { arrayOf, shape, string, object } from 'prop-types';
 import './CardContainer.css';
 import Card from '../Card/Card';
 
@@ -30,7 +30,9 @@ CardContainer.propTypes = {
   districts: arrayOf(shape({
     location: string.isRequired,
     data: object.isRequired
-  }))
+  })),
+  selectCard: PropTypes.func,
+  comparedDistricts: PropTypes.array
 };
 
 export default CardContainer;
