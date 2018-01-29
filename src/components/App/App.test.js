@@ -10,11 +10,12 @@ describe('APP', () => {
     const div = document.createElement('div');
   });
 
-  it('should start with an allDistricts array full of objects, an empty comparedDistrict array, and an empty object', () => {
-    const renderedComponent = shallow(<App />)
+  it('should start with an allDistricts array of 181 objects, an empty comparedDistrict array, and an empty object', () => {
+    const wrapper = shallow(<App />)
 
-    expect(renderedComponent.state().comparedDistricts).toEqual([])
-    expect(renderedComponent.state().comparisonObj).toEqual({})
+    expect(wrapper.state().allDistricts.length).toEqual(181)
+    expect(wrapper.state().comparedDistricts).toEqual([])
+    expect(wrapper.state().comparisonObj).toEqual({})
   })
 
   it('should render the kinderData in headcount app', () => {
@@ -32,7 +33,7 @@ describe('APP', () => {
       { location: "ACADEMY", data: { 2004: 0.75, 2005: 0.25, 2006: 1 }}
     ]
 
-    renderedComponent.setState({allDistricts: mockedCardArray})
+    wrapper.setState({allDistricts: mockedCardArray})
 
     const firstDistrict = renderedComponent.find('article').first()
     const secondDistrict = renderedComponent.find('article').last()
@@ -40,8 +41,10 @@ describe('APP', () => {
     firstDistrict.simulate('click')
     secondDistrict.simulate('click')
 
-    expect(renderedComponent.state().comparedDistricts).toEqual(mockedCardArray)
-    expect(renderedComponent.find('section').first().children().length).toEqual(2)
+    console.log(wrapper.state().debug())
+    expect(wrapper.state().allDistricts).toEqual(mockedCardArray)
+    expect(wrapper.state().comparedDistricts).toEqual(mockedCardArray)
+    // expect(wrapper.find('section').first().children().length).toEqual(2)
   })
 
   it.skip('when two cards are compared it should create a comparison object in state', () => {
@@ -51,9 +54,9 @@ describe('APP', () => {
       { location: "ACADEMY", data: { 2004: 0.75, 2005: 0.25, 2006: 1 }}
     ]
 
-    renderedComponent.setState({allDistricts: mockedCardArray})
-    const firstDistrict = renderedComponent.find('article').first()
-    const secondDistrict = renderedComponent.find('article').last()
+    wrapper.setState({allDistricts: mockedCardArray})
+    const firstDistrict = wrapper.find('article').first()
+    const secondDistrict = wrapper.find('article').last()
     const mockCompObj = {
       "ACADEMY": 0.666,
       "COLORADO": 0.583,
@@ -63,7 +66,7 @@ describe('APP', () => {
     firstDistrict.simulate('click')
     secondDistrict.simulate('click')
 
-    expect(renderedComponent.state().comparisonObj).toEqual(mockCompObj)
+    expect(wrapper.state().comparisonObj).toEqual(mockCompObj)
   })
 })
 

@@ -42,7 +42,7 @@ class App extends Component {
     } else {
       const newestCardData = newFoundDistrictArray[2]
       const newestCardDataUpdate = [newestCardData]
-      
+
       this.setState({ comparedDistricts: newestCardDataUpdate,
                       comparisonObj: {} });
     }
