@@ -9,7 +9,7 @@ const Card = ({ id, location, data, selectCard, addCss }) => {
                                             return <li className={ highOrLow } >{ dataPoint + ': ' + data[ dataPoint ] }</li>
                                         } )
   return (
-    <article className={addCss} id={ location } onClick={ ()=> selectCard(id)}>
+    <article className={addCss} id={ location } onClick={ ()=> selectCard(id)} >
       <h4>{ location }</h4>
       <ul>{ eachCard }</ul>
     </article>

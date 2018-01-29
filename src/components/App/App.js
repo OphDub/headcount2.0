@@ -57,7 +57,6 @@ class App extends Component {
   }
 
   render() {
-    console.log('comparisonObj',this.state.comparisonObj)
     return (
       <div>
         <h1>Welcome To Headcount 2.0</h1>
