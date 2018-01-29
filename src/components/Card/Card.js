@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { string, object } from 'prop-types';
+import React from 'react';
+import { string, object, func } from 'prop-types';
 import './Card.css';
 import FadeIn from 'react-fade-in';
 
@@ -24,7 +24,8 @@ const Card = ({ id, location, data, selectCard, addCss }) => {
 
 Card.propTypes = {
   location: string.isRequired,
-  data: object.isRequired
+  data: object.isRequired,
+  addCss: func.isRequired
 };
 
 export default Card;
