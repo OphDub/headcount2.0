@@ -1,25 +1,68 @@
 article {
     border: 1px solid lightslategray;
-    height: 300px;
+    height: 325px;
     width: 200px;
     margin: 10px;
+    font-family: 'Francois One', sans-serif;
 }
 
 ul {
     margin: auto;
-    padding-left: 70px;
+    padding-left: 60px;
+    list-style-type: none;
+}
+
+li.zero {
+    color: #D1E5F7;
+}
+
+li.one {
+    color:#CAE0F3;
+}
+
+li.two {
+    color: #C5DCF0;
+}
+
+li.three {
+    color: #BDD5EB;
+}
+
+li.four {
+    color: #AFCAE4;
+}
+
+li.five {
+    color: #A5C2DE;
+}
+
+li.six {
+    color: #9BBAD8;
+}
+
+li.seven {
+    color: #93B4D4;
+}
+
+li.eight {
+    color: #86A9CC;
+}
+
+li.nine {
+    color: #789DC5;
+}
+
+li.ten {
+    color: #6F96BF;
 }
 
 h4 {
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 10px;
     text-align: center;
-}
-
-.highFive {
-    color: blue;
-}
-
-.lowFive {
-    color: orangered;
+    background-color: rgb(74, 169, 241);
+    color: rgb(232, 238, 241);
 }
 
 .cardContainer article:hover {
@@ -27,9 +70,9 @@ h4 {
 }
 
 .compareContainer.selected {
-  border: 3px solid #40c8e0;
+  border: 3px solid rgb(57, 185, 231);
 }
 
 .selected {
-    border: 3px solid #40c8e0;
+    border: 3px solid rgb(57, 185, 231);
 }
