@@ -6,28 +6,69 @@ import DistrictRepository from '../../helper';
 import kinderData from '../../data/kindergartners_in_full_day_program';
 
 describe('APP', () => {
-  it('should match the snapshot', () => {
-    const wrapper = shallow(<App />);
+  let wrapper
+  let mockDist1
+  let mockDist2
 
-    expect(wrapper).toMatchSnapshot();
+  beforeEach(() => {
+    wrapper = shallow(<App />)
+    mockDist1 = { data: {2004: 0.24, 2005: 0.278, 2006: 0.337, 2007: 0.395, 2008: 0.536, 2009: 0.598, 2010: 0.64, 2011: 0.672, 2012: 0.695, 2013: 0.703, 2014: 0.741}, location: "COLORADO" }
+    mockDist2 = { data: {2004: 0.069, 2005: 0.509, 2006: 0.638,2007: 0.994, 2008: 0.992, 2009: 1, 2010: 0.993, 2011: 0.994, 2012: 0.993, 2013: 0.989, 2014: 0.994}, location: "COLORADO SPRINGS 11" }
+  })
+
+  it('should match the snapshot', () => {
+    expect(wrapper).toMatchSnapshot()
   })
 
   it('should start with an empty comparedDistrict array, and an empty comparison object', () => {
-    const wrapper = shallow(<App />)
-
     expect(wrapper.state().comparedDistricts).toEqual([])
     expect(wrapper.state().comparisonObj).toEqual({})
   })
 
   it('should have an allDistricts array full of kinderData', () => {
-    const wrapper = shallow(<App />)
-    const masterDistrict = new DistrictRepository (kinderData);
-    const kinderDistrict = masterDistrict.findAllMatches();
+    const masterDistrict = new DistrictRepository (kinderData)
+    const kinderDistrict = masterDistrict.findAllMatches()
 
-    expect(wrapper.state().allDistricts.length).toEqual(181);
+    expect(wrapper.state().allDistricts.length).toEqual(181)
   })
 
-  it('when cards are added to the allDistricts array, they should render to the page', () => {
+  it('should be able to filter the allDistricts array if given a string', () => {
+    const mockedCardArray = kinderData
+    const filteredArray = [ mockDist1, mockDist2 ]
+
+    wrapper.setState({allDistricts: mockedCardArray})
+    wrapper.instance().filterDistricts('CoLoRaDo')
+
+    expect(wrapper.state().allDistricts).toEqual(filteredArray)
+  })
+
+  it('should be able to select only two objects from the allDistricts array and store them in the comparedDistricts array in state', () => {
+    const mockDist3 = { data: { 2004: 0.302, 2005: 0.267, 2006: 0.354, 2007: 0.392, 2008: 0.385, 2009: 0.39, 2010: 0.436, 2011: 0.489, 2012: 0.479, 2013: 0.488, 2014: 0.49}, location: "ACADEMY 20" }
+
+    wrapper.instance().selectCard('COLORADO')
+    wrapper.instance().selectCard('COLORADO SPRINGS 11')
+
+    expect(wrapper.state().comparedDistricts).toEqual([mockDist1, mockDist2])
+
+    wrapper.instance().selectCard('ACADEMY 20')
+
+    expect(wrapper.state().comparedDistricts).toEqual([mockDist3])
+  })
+
+  it('should be able to create a comparisonObject in state when two objects are in the comparedDistricts array', () => {
+    const mockComparisonObj = { "COLORADO": 0.53, "COLORADO SPRINGS 11": 0.833, "compared": 0.636 }
+
+    wrapper.instance().selectCard('COLORADO')
+    wrapper.instance().selectCard('COLORADO SPRINGS 11')
+
+    expect(wrapper.state().comparedDistricts).toEqual([mockDist1, mockDist2])
+    expect(wrapper.state().comparisonObj).toEqual(mockComparisonObj)
+  })
+
+  it('should render the objects in the allDistricts array to the page', () => {
+    const renderedComponent = mount(<App />)
+
+    expect(renderedComponent.find('article').length).toEqual(181)
   })
 
   it.skip('when cards are clicked they should be stored in state and rendered to the page', () => {
@@ -37,17 +78,14 @@ describe('APP', () => {
       { location: "ACADEMY", data: { 2004: 0.75, 2005: 0.25, 2006: 1 }}
     ]
 
-    wrapper.setState({allDistricts: mockedCardArray})
-
-    const firstDistrict = wrapper.find('article').first()
-    const secondDistrict = wrapper.find('article').last()
+    const firstDistrict = wrapper.find('#BUENA')
+    const secondDistrict = wrapper.find('#BETHUNE')
 
     firstDistrict.simulate('click')
     secondDistrict.simulate('click')
 
-    expect(wrapper.state().allDistricts).toEqual(mockedCardArray)
     expect(wrapper.state().comparedDistricts).toEqual(mockedCardArray)
-    // expect(wrapper.find('section').first().children().length).toEqual(2)
+    expect(wrapper.find('search').children().length).toEqual(3)
   })
 
   it.skip('when two cards are compared it should create a comparison object in state', () => {
