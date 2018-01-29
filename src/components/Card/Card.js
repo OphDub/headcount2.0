@@ -5,8 +5,11 @@ import FadeIn from 'react-fade-in';
 
 const Card = ({ id, location, data, selectCard, addCss }) => {
   const eachCard = Object.keys(data).map( dataPoint => {
-                                            const highOrLow = data[ dataPoint ] >= 0.5 ? "highFive" : "lowFive";
-
+                                          const roundedAverage = Math.round(data[ dataPoint ] * 10 )   
+                                          console.log(roundedAverage)
+                                          const converter = require('number-to-words');
+                                          const numToWords = converter.toWords(roundedAverage);
+                                          const highOrLow = data[ dataPoint ] ? numToWords : "zero"
                                             return <li className={ highOrLow } >{ dataPoint + ': ' + data[ dataPoint ] }</li>
                                         } )
   return (
