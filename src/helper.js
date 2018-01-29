@@ -14,9 +14,13 @@ class DistrictRepository {
         };
       }
 
-      const cleanNum = dataPoint.Data === "N/A" || dataPoint.Data === "#DIV/0!" ? dataPoint.Data = 0 : dataPoint.Data;
+      const cleanNum = dataPoint.Data === "N/A" || 
+                       dataPoint.Data === "#DIV/0!" ? 
+        dataPoint.Data = 0 : dataPoint.Data;
 
-      const roundedNum = cleanNum > 0 && cleanNum < 1 ? ( Math.round( cleanNum * 1000 ) ) / 1000 : cleanNum;
+      const roundedNum = cleanNum > 0 && cleanNum < 1 ?
+        ( Math.round( cleanNum * 1000 ) ) / 1000 
+        : cleanNum;
 
       accu[upCaseLocation].data[yearTimeFrame] = roundedNum;
 
@@ -76,7 +80,8 @@ class DistrictRepository {
     const upCaseSkool1 = skool1.toUpperCase();
     const upCaseSkool2 = skool2.toUpperCase();
 
-    const average = this.findAverage(upCaseSkool1) < this.findAverage(upCaseSkool2) ?
+    const average = this.findAverage(upCaseSkool1)
+                    < this.findAverage(upCaseSkool2) ?
       this.findAverage(upCaseSkool1) / this.findAverage(upCaseSkool2) :
       this.findAverage(upCaseSkool2) / this.findAverage(upCaseSkool1);
     const roundedAve = Math.round(average * 1000) / 1000;

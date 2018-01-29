@@ -3,7 +3,6 @@ import CompareContainer from './CompareContainer';
 import Card from '../Card/Card';
 import App from '../App/App';
 import { shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 import DistrictRepository from '../../helper';
 import kinderData from '../../data/kindergartners_in_full_day_program';
 
@@ -19,7 +18,8 @@ describe('COMPARE CONTAINER', () => {
     renderedComponent = shallow(<App />);
     masterDistrict = new DistrictRepository(kinderData);
     mockSelectFunc = jest.fn();
-    comparisonObj = {'CAMPO RE-6': 0.657, 'CANON CITY RE-1': 0.709, compared: 0.927};
+    comparisonObj = {'CAMPO RE-6': 0.657,
+      'CANON CITY RE-1': 0.709, compared: 0.927};
     comparedDistrictsArr = [{ location: 'CAMPO RE-6',
       data: 
                         { '2004': 0,

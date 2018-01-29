@@ -10,8 +10,8 @@ class Search extends Component {
     };
   }
 
-  handleInput = (e) => {
-    const { value } = e.target;
+  handleInput = (event) => {
+    const { value } = event.target;
     this.setState({ searchValue: value });
     this.props.filterDistricts(this.state.searchValue);
   }

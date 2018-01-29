@@ -1,7 +1,6 @@
 import React from 'react';
 import Search from './Search';
 import { shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 
 describe('SEARCH', () => {
   let mockFn;
@@ -25,7 +24,7 @@ describe('SEARCH', () => {
     expect(wrapper.state().searchValue).toEqual(mockEvent.target.value);
   });
 
-  test('when state is updated, it should also call the filterDistrcit function passed to Search', () => {
+  test('update state should call the filterDistrcit function', () => {
     wrapper.instance().handleInput(mockEvent);
     wrapper.update();
 
