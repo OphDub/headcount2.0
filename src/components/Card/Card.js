@@ -4,17 +4,21 @@ import './Card.css';
 import FadeIn from 'react-fade-in';
 
 const Card = ({ id, location, data, selectCard, addCss }) => {
-  const eachCard = Object.keys(data).map( dataPoint => {
-    const roundedAverage = Math.round(data[dataPoint] * 10 );   
-    console.log(roundedAverage);
+  const eachCard = Object.keys(data).map( (dataPoint, index) => {
+    const roundedAverage = Math.round(data[dataPoint] * 10 );
     const converter = require('number-to-words');
     const numToWords = converter.toWords(roundedAverage);
     const highOrLow = data[dataPoint] ? numToWords : "zero";
-    return <li className={ highOrLow } >{ dataPoint + ': ' + data[dataPoint] }</li>;
+
+    return  <li className={ highOrLow } key={index}>
+      { dataPoint + ': ' + data[dataPoint] }
+    </li>;
   } );
   return (
     <FadeIn>
-      <article className={addCss} id={ location } onClick={ ()=> selectCard(id)} >
+      <article  className={addCss}
+        id={ location }
+        onClick={ ()=> selectCard(id)} >
         <h4>{ location }</h4>
         <ul>{ eachCard }</ul>
       </article>
@@ -23,9 +27,11 @@ const Card = ({ id, location, data, selectCard, addCss }) => {
 };
 
 Card.propTypes = {
+  id: string.isRequired,
   location: string.isRequired,
   data: object.isRequired,
-  addCss: func.isRequired
+  addCss: func.isRequired,
+  selectCard: func.isRequired
 };
 
 export default Card;
