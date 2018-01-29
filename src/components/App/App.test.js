@@ -77,6 +77,7 @@ describe('APP', () => {
     expect(renderedComponent.find('article').length).toEqual(181);
   });
 
+
   it.skip('when cards are clicked they should be stored in state and rendered to the page', () => {
     const wrapper = mount(<App />);
     const lastMockDist = {
@@ -91,12 +92,13 @@ describe('APP', () => {
     firstDistrict.simulate('click');
     secondDistrict.simulate('click');
 
-    expect(wrapper.state().comparedDistricts).toEqual(mockedCardArray);
-    // expect(wrapper.find('compareContainer').children().length).toEqual(3)
-  });
+    expect(wrapper.state().comparedDistricts).toEqual(mockedCardArray)
+    expect(wrapper.find('article.selected').last().hasClass('selected')).toEqual(true)
+    expect(wrapper.find('article.selected').length).toEqual(4)
+  })
 
-  it.only('when two cards are compared it should create a comparison object in state', () => {
-    const wrapper = mount(<App />);
+  it('when two cards are compared it should create a comparison object in state', () => {
+    const wrapper = mount(<App />)
     const lastMockDist = {
       data: {2004:0, 2005:1, 2006:1, 2007:1, 2008:1, 2009:1, 2010:1, 2011:1, 2012:1, 2013:1, 2014:1},
       location: "YUMA SCHOOL DISTRICT 1"
@@ -114,9 +116,10 @@ describe('APP', () => {
     firstDistrict.simulate('click');
     secondDistrict.simulate('click');
 
-    expect(wrapper.state().comparisonObj).toEqual(mockCompObj);
-    expect(wrapper.find('article.selected').last().hasClass('selected')).toEqual(true);
-    expect(wrapper.find('article.selected').length).toEqual(4);
-  });
-});
+    expect(wrapper.find('article.selected').last().hasClass('selected')).toEqual(true)
+    expect(wrapper.find('article.selected').length).toEqual(4)
+    expect(wrapper.state().comparisonObj).toEqual(mockCompObj)
+    expect(wrapper.find('.comparisonCard').length).toEqual(1)
+  })
+})
 
