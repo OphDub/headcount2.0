@@ -14,10 +14,10 @@ const CardContainer = ({ districts, selectCard, comparedDistricts }) => {
 
   const renderedCards = districts.map((district) =>
         <Card {...district}
-               key={district.location}
                id={district.location}
                selectCard={selectCard}
-               addCss={addCss(district)}/>)
+               addCss={addCss(district)}
+               key={district.location} />)
 
   return (
     <section className="cardContainer">

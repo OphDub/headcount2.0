@@ -7,12 +7,12 @@ import Adapter from 'enzyme-adapter-react-16';
 describe('CARD CONTAINER', () => {
   let wrapper;
   let mockSelectFunc;
-  let mockAddCssFunc;
+  let comparedDistrictsObj;
   let districtArr;
 
   beforeEach(() => {
     mockSelectFunc = jest.fn();
-    mockAddCssFunc = jest.fn();
+    comparedDistrictsObj = [{"data": {"2004": 0.75, "2005": 0.25, "2006": 1}, "location": "ACADEMY"}];
     districtArr = [ { location: 'CAMPO RE-6',
     data:
      { '2004': 0,
@@ -65,10 +65,11 @@ describe('CARD CONTAINER', () => {
        '2012': 1,
        '2013': 1,
        '2014': 1 } } ];
-    wrapper = shallow(<CardContainer districts={districtArr} selectCard={mockSelectFunc} addCss={mockAddCssFunc}/>);
+    wrapper = shallow(<CardContainer districts={districtArr} selectCard={mockSelectFunc} comparedDistricts={comparedDistrictsObj}/>);
   });
 
   it('it should exist', () => {
+    wrapper.debug()
     expect(wrapper).toBeDefined()
   })
 
