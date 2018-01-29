@@ -88,22 +88,32 @@ ShallowWrapper {
           className="comparisonCard"
 >
           <div>
-                    <div>
+                    <div
+                              className="displayData"
+                    >
                               CAMPO RE-6
                                
+                              <br />
+                               
                               <span>
+                                        Average Enrollment:  
                                         0.657
                               </span>
                     </div>
           </div>
           <div>
-                    0.927
+                    Combined Average:  0.927
           </div>
           <div>
-                    <div>
+                    <div
+                              className="displayData"
+                    >
                               CANON CITY RE-1
                                
+                              <br />
+                               
                               <span>
+                                        Average Enrollment:  
                                         0.709
                               </span>
                     </div>
@@ -169,22 +179,32 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div>
-              <div>
+              <div
+                            className="displayData"
+              >
                             CAMPO RE-6
                              
+                            <br />
+                             
                             <span>
+                                          Average Enrollment:  
                                           0.657
                             </span>
               </div>
 </div>,
             <div>
-              0.927
+              Combined Average:  0.927
 </div>,
             <div>
-              <div>
+              <div
+                            className="displayData"
+              >
                             CANON CITY RE-1
                              
+                            <br />
+                             
                             <span>
+                                          Average Enrollment:  
                                           0.709
                             </span>
               </div>
@@ -199,10 +219,15 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <div>
+              "children": <div
+                className="displayData"
+>
                 CAMPO RE-6
                  
+                <br />
+                 
                 <span>
+                                Average Enrollment:  
                                 0.657
                 </span>
 </div>,
@@ -216,10 +241,14 @@ ShallowWrapper {
                 "children": Array [
                   "CAMPO RE-6",
                   " ",
+                  <br />,
+                  " ",
                   <span>
+                    Average Enrollment:  
                     0.657
 </span>,
                 ],
+                "className": "displayData",
               },
               "ref": null,
               "rendered": Array [
@@ -229,11 +258,27 @@ ShallowWrapper {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": "br",
+                },
+                " ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
                   "props": Object {
-                    "children": 0.657,
+                    "children": Array [
+                      "Average Enrollment:  ",
+                      0.657,
+                    ],
                   },
                   "ref": null,
-                  "rendered": 0.657,
+                  "rendered": Array [
+                    "Average Enrollment:  ",
+                    0.657,
+                  ],
                   "type": "span",
                 },
               ],
@@ -246,10 +291,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": 0.927,
+              "children": "Combined Average:  0.927",
             },
             "ref": null,
-            "rendered": 0.927,
+            "rendered": "Combined Average:  0.927",
             "type": "div",
           },
           Object {
@@ -257,10 +302,15 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <div>
+              "children": <div
+                className="displayData"
+>
                 CANON CITY RE-1
                  
+                <br />
+                 
                 <span>
+                                Average Enrollment:  
                                 0.709
                 </span>
 </div>,
@@ -274,10 +324,14 @@ ShallowWrapper {
                 "children": Array [
                   "CANON CITY RE-1",
                   " ",
+                  <br />,
+                  " ",
                   <span>
+                    Average Enrollment:  
                     0.709
 </span>,
                 ],
+                "className": "displayData",
               },
               "ref": null,
               "rendered": Array [
@@ -287,11 +341,27 @@ ShallowWrapper {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": "br",
+                },
+                " ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
                   "props": Object {
-                    "children": 0.709,
+                    "children": Array [
+                      "Average Enrollment:  ",
+                      0.709,
+                    ],
                   },
                   "ref": null,
-                  "rendered": 0.709,
+                  "rendered": Array [
+                    "Average Enrollment:  ",
+                    0.709,
+                  ],
                   "type": "span",
                 },
               ],
@@ -364,22 +434,32 @@ ShallowWrapper {
             className="comparisonCard"
 >
             <div>
-                        <div>
+                        <div
+                                    className="displayData"
+                        >
                                     CAMPO RE-6
                                      
+                                    <br />
+                                     
                                     <span>
+                                                Average Enrollment:  
                                                 0.657
                                     </span>
                         </div>
             </div>
             <div>
-                        0.927
+                        Combined Average:  0.927
             </div>
             <div>
-                        <div>
+                        <div
+                                    className="displayData"
+                        >
                                     CANON CITY RE-1
                                      
+                                    <br />
+                                     
                                     <span>
+                                                Average Enrollment:  
                                                 0.709
                                     </span>
                         </div>
@@ -445,22 +525,32 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div>
-                <div>
+                <div
+                                className="displayData"
+                >
                                 CAMPO RE-6
                                  
+                                <br />
+                                 
                                 <span>
+                                                Average Enrollment:  
                                                 0.657
                                 </span>
                 </div>
 </div>,
               <div>
-                0.927
+                Combined Average:  0.927
 </div>,
               <div>
-                <div>
+                <div
+                                className="displayData"
+                >
                                 CANON CITY RE-1
                                  
+                                <br />
+                                 
                                 <span>
+                                                Average Enrollment:  
                                                 0.709
                                 </span>
                 </div>
@@ -475,10 +565,15 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <div>
+                "children": <div
+                  className="displayData"
+>
                   CAMPO RE-6
                    
+                  <br />
+                   
                   <span>
+                                    Average Enrollment:  
                                     0.657
                   </span>
 </div>,
@@ -492,10 +587,14 @@ ShallowWrapper {
                   "children": Array [
                     "CAMPO RE-6",
                     " ",
+                    <br />,
+                    " ",
                     <span>
+                      Average Enrollment:  
                       0.657
 </span>,
                   ],
+                  "className": "displayData",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -505,11 +604,27 @@ ShallowWrapper {
                     "instance": null,
                     "key": undefined,
                     "nodeType": "host",
+                    "props": Object {},
+                    "ref": null,
+                    "rendered": null,
+                    "type": "br",
+                  },
+                  " ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
                     "props": Object {
-                      "children": 0.657,
+                      "children": Array [
+                        "Average Enrollment:  ",
+                        0.657,
+                      ],
                     },
                     "ref": null,
-                    "rendered": 0.657,
+                    "rendered": Array [
+                      "Average Enrollment:  ",
+                      0.657,
+                    ],
                     "type": "span",
                   },
                 ],
@@ -522,10 +637,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": 0.927,
+                "children": "Combined Average:  0.927",
               },
               "ref": null,
-              "rendered": 0.927,
+              "rendered": "Combined Average:  0.927",
               "type": "div",
             },
             Object {
@@ -533,10 +648,15 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <div>
+                "children": <div
+                  className="displayData"
+>
                   CANON CITY RE-1
                    
+                  <br />
+                   
                   <span>
+                                    Average Enrollment:  
                                     0.709
                   </span>
 </div>,
@@ -550,10 +670,14 @@ ShallowWrapper {
                   "children": Array [
                     "CANON CITY RE-1",
                     " ",
+                    <br />,
+                    " ",
                     <span>
+                      Average Enrollment:  
                       0.709
 </span>,
                   ],
+                  "className": "displayData",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -563,11 +687,27 @@ ShallowWrapper {
                     "instance": null,
                     "key": undefined,
                     "nodeType": "host",
+                    "props": Object {},
+                    "ref": null,
+                    "rendered": null,
+                    "type": "br",
+                  },
+                  " ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
                     "props": Object {
-                      "children": 0.709,
+                      "children": Array [
+                        "Average Enrollment:  ",
+                        0.709,
+                      ],
                     },
                     "ref": null,
-                    "rendered": 0.709,
+                    "rendered": Array [
+                      "Average Enrollment:  ",
+                      0.709,
+                    ],
                     "type": "span",
                   },
                 ],
@@ -707,22 +847,32 @@ ShallowWrapper {
           className="comparisonCard"
 >
           <div>
-                    <div>
+                    <div
+                              className="displayData"
+                    >
                               CAMPO RE-6
                                
+                              <br />
+                               
                               <span>
+                                        Average Enrollment:  
                                         0.657
                               </span>
                     </div>
           </div>
           <div>
-                    0.927
+                    Combined Average:  0.927
           </div>
           <div>
-                    <div>
+                    <div
+                              className="displayData"
+                    >
                               CANON CITY RE-1
                                
+                              <br />
+                               
                               <span>
+                                        Average Enrollment:  
                                         0.709
                               </span>
                     </div>
@@ -788,22 +938,32 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div>
-              <div>
+              <div
+                            className="displayData"
+              >
                             CAMPO RE-6
                              
+                            <br />
+                             
                             <span>
+                                          Average Enrollment:  
                                           0.657
                             </span>
               </div>
 </div>,
             <div>
-              0.927
+              Combined Average:  0.927
 </div>,
             <div>
-              <div>
+              <div
+                            className="displayData"
+              >
                             CANON CITY RE-1
                              
+                            <br />
+                             
                             <span>
+                                          Average Enrollment:  
                                           0.709
                             </span>
               </div>
@@ -818,10 +978,15 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <div>
+              "children": <div
+                className="displayData"
+>
                 CAMPO RE-6
                  
+                <br />
+                 
                 <span>
+                                Average Enrollment:  
                                 0.657
                 </span>
 </div>,
@@ -835,10 +1000,14 @@ ShallowWrapper {
                 "children": Array [
                   "CAMPO RE-6",
                   " ",
+                  <br />,
+                  " ",
                   <span>
+                    Average Enrollment:  
                     0.657
 </span>,
                 ],
+                "className": "displayData",
               },
               "ref": null,
               "rendered": Array [
@@ -848,11 +1017,27 @@ ShallowWrapper {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": "br",
+                },
+                " ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
                   "props": Object {
-                    "children": 0.657,
+                    "children": Array [
+                      "Average Enrollment:  ",
+                      0.657,
+                    ],
                   },
                   "ref": null,
-                  "rendered": 0.657,
+                  "rendered": Array [
+                    "Average Enrollment:  ",
+                    0.657,
+                  ],
                   "type": "span",
                 },
               ],
@@ -865,10 +1050,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": 0.927,
+              "children": "Combined Average:  0.927",
             },
             "ref": null,
-            "rendered": 0.927,
+            "rendered": "Combined Average:  0.927",
             "type": "div",
           },
           Object {
@@ -876,10 +1061,15 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <div>
+              "children": <div
+                className="displayData"
+>
                 CANON CITY RE-1
                  
+                <br />
+                 
                 <span>
+                                Average Enrollment:  
                                 0.709
                 </span>
 </div>,
@@ -893,10 +1083,14 @@ ShallowWrapper {
                 "children": Array [
                   "CANON CITY RE-1",
                   " ",
+                  <br />,
+                  " ",
                   <span>
+                    Average Enrollment:  
                     0.709
 </span>,
                 ],
+                "className": "displayData",
               },
               "ref": null,
               "rendered": Array [
@@ -906,11 +1100,27 @@ ShallowWrapper {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": "br",
+                },
+                " ",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
                   "props": Object {
-                    "children": 0.709,
+                    "children": Array [
+                      "Average Enrollment:  ",
+                      0.709,
+                    ],
                   },
                   "ref": null,
-                  "rendered": 0.709,
+                  "rendered": Array [
+                    "Average Enrollment:  ",
+                    0.709,
+                  ],
                   "type": "span",
                 },
               ],
@@ -983,22 +1193,32 @@ ShallowWrapper {
             className="comparisonCard"
 >
             <div>
-                        <div>
+                        <div
+                                    className="displayData"
+                        >
                                     CAMPO RE-6
                                      
+                                    <br />
+                                     
                                     <span>
+                                                Average Enrollment:  
                                                 0.657
                                     </span>
                         </div>
             </div>
             <div>
-                        0.927
+                        Combined Average:  0.927
             </div>
             <div>
-                        <div>
+                        <div
+                                    className="displayData"
+                        >
                                     CANON CITY RE-1
                                      
+                                    <br />
+                                     
                                     <span>
+                                                Average Enrollment:  
                                                 0.709
                                     </span>
                         </div>
@@ -1064,22 +1284,32 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div>
-                <div>
+                <div
+                                className="displayData"
+                >
                                 CAMPO RE-6
                                  
+                                <br />
+                                 
                                 <span>
+                                                Average Enrollment:  
                                                 0.657
                                 </span>
                 </div>
 </div>,
               <div>
-                0.927
+                Combined Average:  0.927
 </div>,
               <div>
-                <div>
+                <div
+                                className="displayData"
+                >
                                 CANON CITY RE-1
                                  
+                                <br />
+                                 
                                 <span>
+                                                Average Enrollment:  
                                                 0.709
                                 </span>
                 </div>
@@ -1094,10 +1324,15 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <div>
+                "children": <div
+                  className="displayData"
+>
                   CAMPO RE-6
                    
+                  <br />
+                   
                   <span>
+                                    Average Enrollment:  
                                     0.657
                   </span>
 </div>,
@@ -1111,10 +1346,14 @@ ShallowWrapper {
                   "children": Array [
                     "CAMPO RE-6",
                     " ",
+                    <br />,
+                    " ",
                     <span>
+                      Average Enrollment:  
                       0.657
 </span>,
                   ],
+                  "className": "displayData",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -1124,11 +1363,27 @@ ShallowWrapper {
                     "instance": null,
                     "key": undefined,
                     "nodeType": "host",
+                    "props": Object {},
+                    "ref": null,
+                    "rendered": null,
+                    "type": "br",
+                  },
+                  " ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
                     "props": Object {
-                      "children": 0.657,
+                      "children": Array [
+                        "Average Enrollment:  ",
+                        0.657,
+                      ],
                     },
                     "ref": null,
-                    "rendered": 0.657,
+                    "rendered": Array [
+                      "Average Enrollment:  ",
+                      0.657,
+                    ],
                     "type": "span",
                   },
                 ],
@@ -1141,10 +1396,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": 0.927,
+                "children": "Combined Average:  0.927",
               },
               "ref": null,
-              "rendered": 0.927,
+              "rendered": "Combined Average:  0.927",
               "type": "div",
             },
             Object {
@@ -1152,10 +1407,15 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <div>
+                "children": <div
+                  className="displayData"
+>
                   CANON CITY RE-1
                    
+                  <br />
+                   
                   <span>
+                                    Average Enrollment:  
                                     0.709
                   </span>
 </div>,
@@ -1169,10 +1429,14 @@ ShallowWrapper {
                   "children": Array [
                     "CANON CITY RE-1",
                     " ",
+                    <br />,
+                    " ",
                     <span>
+                      Average Enrollment:  
                       0.709
 </span>,
                   ],
+                  "className": "displayData",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -1182,11 +1446,27 @@ ShallowWrapper {
                     "instance": null,
                     "key": undefined,
                     "nodeType": "host",
+                    "props": Object {},
+                    "ref": null,
+                    "rendered": null,
+                    "type": "br",
+                  },
+                  " ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
                     "props": Object {
-                      "children": 0.709,
+                      "children": Array [
+                        "Average Enrollment:  ",
+                        0.709,
+                      ],
                     },
                     "ref": null,
-                    "rendered": 0.709,
+                    "rendered": Array [
+                      "Average Enrollment:  ",
+                      0.709,
+                    ],
                     "type": "span",
                   },
                 ],

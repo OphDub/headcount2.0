@@ -82,7 +82,6 @@ describe('CARD CONTAINER', () => {
   });
 
   it('should return correct last district card component', () => {
-    let { location, data, id } = districtArr[3];
     expect(wrapper.find(Card).get(3).props.location).toEqual("CENTER 26 JT");
     expect(wrapper.find(Card).get(3).props.data).toEqual(
       {"2004": 1, "2005": 1, "2006": 1, "2007": 1, "2008": 1, "2009": 1,
