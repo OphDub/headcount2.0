@@ -76,3 +76,11 @@ h4 {
 .selected {
     border: 3px solid rgb(57, 185, 231);
 }
+
+.displayData {
+    padding: 30px;
+}
+
+.displayData span {
+    color: rgb(57, 185, 231);
+}

@@ -38,6 +38,7 @@ class App extends Component {
 
     if (stateLocations.includes(foundDist.location)) {
       this.state.comparedDistricts.pop(foundDist.location)
+      this.setState({ comparedDistricts: newFoundArray });
     } else if (!stateLocations.includes(foundDist.location) &&
       newFoundArray.length <= 2 ) {
       this.setState({ comparedDistricts: newFoundArray });
