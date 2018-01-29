@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import CompareContainer from './CompareContainer';
 import Card from '../Card/Card';
