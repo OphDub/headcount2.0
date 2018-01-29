@@ -1,3 +1,4 @@
+/* eslint-disable */
 module.exports =
 [
   {
@@ -26607,4 +26608,4 @@ module.exports =
     "DataFormat": "Percent",
     "Data": 0.37931
   }
-]
+];

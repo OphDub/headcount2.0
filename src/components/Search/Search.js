@@ -7,28 +7,28 @@ class Search extends Component {
     super(props);
     this.state = {
       searchValue: ''
-    }
+    };
   }
 
-  handleInput = (e) => {
-    const { value } = e.target;
-    this.setState({ searchValue: value })
-    this.props.filterDistricts(this.state.searchValue)
+  handleInput = (event) => {
+    const { value } = event.target;
+    this.setState({ searchValue: value });
+    this.props.filterDistricts(this.state.searchValue);
   }
 
   render() {
     return (
       <form className="search">
         <input  type="text"
-                placeholder="Search by District Name"
-                onChange={this.handleInput}/>
+          placeholder="Search by District Name"
+          onChange={this.handleInput}/>
       </form>
-    )
+    );
   }
 }
 
 Search.propTypes = {
   filterDistricts: PropTypes.func.isRequired
-}
+};
 
 export default Search;
